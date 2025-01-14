@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://dbg6pn3l745r8"]
+[gd_scene load_steps=7 format=3 uid="uid://dbg6pn3l745r8"]
+
+[ext_resource type="PackedScene" uid="uid://y8jax64gdbgg" path="res://scenes/player.tscn" id="1_6gi5y"]
+[ext_resource type="Shader" path="res://scenes/blur.gdshader" id="1_faf41"]
+[ext_resource type="Texture2D" uid="uid://cjst0l3ytij0" path="res://assets/sprites/background1.jpg" id="2_wkxea"]
+[ext_resource type="PackedScene" uid="uid://yusph54xosra" path="res://scenes/ground.tscn" id="3_qdm1x"]
+[ext_resource type="Texture2D" uid="uid://pgwvw0yljs5u" path="res://assets/sprites/pillar.png" id="4_7aud8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yudl"]
+shader = ExtResource("1_faf41")
+shader_parameter/blur_amount = Vector2(0.01, 0.01)
 
 [node name="Game" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background1" type="Sprite2D" parent="ParallaxBackground"]
+material = SubResource("ShaderMaterial_7yudl")
+texture = ExtResource("2_wkxea")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Pillar" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1360, 616)
+texture = ExtResource("4_7aud8")
+
+[node name="Player" parent="." instance=ExtResource("1_6gi5y")]
+z_index = 5
+position = Vector2(349, 422)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_qdm1x")]
+position = Vector2(600, 1080)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_qdm1x")]
+position = Vector2(2056, 1080)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_qdm1x")]
+position = Vector2(3472, 1080)
