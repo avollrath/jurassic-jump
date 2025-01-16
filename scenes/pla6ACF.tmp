@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://y8jax64gdbgg"]
+[gd_scene load_steps=13 format=3 uid="uid://y8jax64gdbgg"]
 
 [ext_resource type="Texture2D" uid="uid://54m7ttauwmoo" path="res://assets/sprites/char_sprite.png" id="1_4ltex"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_k5b5s"]
-[ext_resource type="AudioStream" uid="uid://rvdjn1mt5uh3" path="res://assets/sounds/jump.mp3" id="3_tiai8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7322i"]
 atlas = ExtResource("1_4ltex")
@@ -96,7 +95,3 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 drag_top_margin = 0.5
-
-[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_tiai8")
-bus = &"SFX"

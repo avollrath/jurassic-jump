@@ -1,41 +1,125 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbg6pn3l745r8"]
+[gd_scene load_steps=15 format=3 uid="uid://dbg6pn3l745r8"]
 
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_1w478"]
 [ext_resource type="PackedScene" uid="uid://y8jax64gdbgg" path="res://scenes/player.tscn" id="1_6gi5y"]
-[ext_resource type="Shader" path="res://scenes/blur.gdshader" id="1_faf41"]
 [ext_resource type="Texture2D" uid="uid://cjst0l3ytij0" path="res://assets/sprites/background1.jpg" id="2_wkxea"]
 [ext_resource type="PackedScene" uid="uid://yusph54xosra" path="res://scenes/ground.tscn" id="3_qdm1x"]
 [ext_resource type="Texture2D" uid="uid://pgwvw0yljs5u" path="res://assets/sprites/pillar.png" id="4_7aud8"]
+[ext_resource type="PackedScene" uid="uid://dmdftj6ddc66i" path="res://scenes/platform.tscn" id="5_ft028"]
+[ext_resource type="PackedScene" uid="uid://do00t2ki36mvf" path="res://scenes/coin.tscn" id="6_l1upn"]
+[ext_resource type="PackedScene" uid="uid://b3kiul8e7ijxt" path="res://scenes/killzone.tscn" id="7_2a2wm"]
+[ext_resource type="PackedScene" uid="uid://c7d7bq3wwuvad" path="res://scenes/high_platform.tscn" id="8_d5ebl"]
+[ext_resource type="PackedScene" uid="uid://cftnj4ygn37ep" path="res://scenes/snail.tscn" id="9_jkw21"]
+[ext_resource type="PackedScene" uid="uid://0hdyud3pqhlu" path="res://scenes/mushroom.tscn" id="11_vb61r"]
+
+[sub_resource type="Shader" id="Shader_25mik"]
+code = "shader_type canvas_item;
+
+uniform vec2 blur_amount = vec2(0.01, 0.01);
+
+void fragment() {
+	// Called for every pixel the material is visible on.
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7yudl"]
-shader = ExtResource("1_faf41")
+shader = SubResource("Shader_25mik")
 shader_parameter/blur_amount = Vector2(0.01, 0.01)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3imwi"]
 
 [node name="Game" type="Node2D"]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_1w478")
 
-[node name="Background1" type="Sprite2D" parent="ParallaxBackground"]
+[node name="Level1" type="Node" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Level1"]
+
+[node name="Background1" type="Sprite2D" parent="Level1/ParallaxBackground"]
 material = SubResource("ShaderMaterial_7yudl")
 texture = ExtResource("2_wkxea")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Level1/ParallaxBackground"]
 motion_scale = Vector2(0.1, 0.1)
 
-[node name="Pillar" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1360, 616)
+[node name="Pillar" type="Sprite2D" parent="Level1/ParallaxBackground/ParallaxLayer"]
+position = Vector2(1248, 608)
 texture = ExtResource("4_7aud8")
 
-[node name="Player" parent="." instance=ExtResource("1_6gi5y")]
+[node name="Player" parent="Level1" instance=ExtResource("1_6gi5y")]
 z_index = 5
 position = Vector2(349, 422)
+SPEED = 600.0
+JUMP_VELOCITY = -1400.0
+DECELERATION = 500.0
 
-[node name="StaticBody2D" parent="." instance=ExtResource("3_qdm1x")]
-position = Vector2(600, 1080)
+[node name="Coins" type="Node" parent="Level1"]
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("3_qdm1x")]
-position = Vector2(2056, 1080)
+[node name="Coin" parent="Level1/Coins" instance=ExtResource("6_l1upn")]
+position = Vector2(832, 768)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("3_qdm1x")]
-position = Vector2(3472, 1080)
+[node name="Coin2" parent="Level1/Coins" instance=ExtResource("6_l1upn")]
+position = Vector2(928, 768)
+
+[node name="Coin3" parent="Level1/Coins" instance=ExtResource("6_l1upn")]
+position = Vector2(1024, 768)
+
+[node name="Grounds" type="Node" parent="Level1"]
+
+[node name="Ground" parent="Level1/Grounds" instance=ExtResource("3_qdm1x")]
+position = Vector2(611, 1095)
+
+[node name="Ground2" parent="Level1/Grounds" instance=ExtResource("3_qdm1x")]
+position = Vector2(2080, 1095)
+
+[node name="Ground3" parent="Level1/Grounds" instance=ExtResource("3_qdm1x")]
+position = Vector2(4288, 1095)
+
+[node name="Ground4" parent="Level1/Grounds" instance=ExtResource("3_qdm1x")]
+position = Vector2(7072, 1095)
+
+[node name="Platforms" type="Node" parent="Level1"]
+
+[node name="Platform" parent="Level1/Platforms" instance=ExtResource("5_ft028")]
+position = Vector2(2848, 704)
+
+[node name="Platform4" parent="Level1/Platforms" instance=ExtResource("5_ft028")]
+position = Vector2(704, 480)
+
+[node name="Platform2" parent="Level1/Platforms" instance=ExtResource("5_ft028")]
+position = Vector2(3424, 384)
+
+[node name="Platform3" parent="Level1/Platforms" instance=ExtResource("5_ft028")]
+position = Vector2(4992, 736)
+
+[node name="HighPlatform" parent="Level1/Platforms" instance=ExtResource("8_d5ebl")]
+position = Vector2(5696, 800)
+
+[node name="Killzone" parent="." instance=ExtResource("7_2a2wm")]
+position = Vector2(480, 1152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-2, 0)
+shape = SubResource("WorldBoundaryShape2D_3imwi")
+
+[node name="Snail" parent="." instance=ExtResource("9_jkw21")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(4576, 928)
+
+[node name="Snail2" parent="." instance=ExtResource("9_jkw21")]
+z_index = 1
+position = Vector2(672, 392)
+
+[node name="Mushroom" parent="." instance=ExtResource("11_vb61r")]
+position = Vector2(160, 928)
