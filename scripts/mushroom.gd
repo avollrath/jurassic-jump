@@ -6,7 +6,8 @@ extends Area2D
 func _on_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:
 		if body.global_position.y < global_position.y and body.velocity.y > 0:
-			bounce_sound.play()
+			animated_sprite.frame  = 1
+			AudioManager.bounce_sound.play()
 			animated_sprite.play()
 			body.jump(jump_boost_velocity)
 		

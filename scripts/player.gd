@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -700.0
 @export var DECELERATION = 200.0  # Rate of slowing down when no input is provided.
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var jump_sound: AudioStreamPlayer2D = $JumpSound
 
 func _physics_process(delta: float) -> void:
 	# Add gravity.
@@ -14,6 +13,7 @@ func _physics_process(delta: float) -> void:
 	# Handle player-initiated jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jump()
+		AudioManager.jump_sound.play()
 
 	# Get the input direction.
 	var direction := Input.get_axis("move_left", "move_right")
@@ -36,6 +36,5 @@ func _physics_process(delta: float) -> void:
 func jump(custom_jump_velocity: float = JUMP_VELOCITY) -> void:
 	if is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		jump_sound.play()
 	else:
 		velocity.y = custom_jump_velocity

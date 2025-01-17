@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dbg6pn3l745r8"]
+[gd_scene load_steps=17 format=3 uid="uid://dbg6pn3l745r8"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_1w478"]
 [ext_resource type="PackedScene" uid="uid://y8jax64gdbgg" path="res://scenes/player.tscn" id="1_6gi5y"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://b3kiul8e7ijxt" path="res://scenes/killzone.tscn" id="7_2a2wm"]
 [ext_resource type="PackedScene" uid="uid://c7d7bq3wwuvad" path="res://scenes/high_platform.tscn" id="8_d5ebl"]
 [ext_resource type="PackedScene" uid="uid://cftnj4ygn37ep" path="res://scenes/snail.tscn" id="9_jkw21"]
+[ext_resource type="PackedScene" uid="uid://dln7ow5k54uah" path="res://scenes/finish.tscn" id="11_npr13"]
 [ext_resource type="PackedScene" uid="uid://0hdyud3pqhlu" path="res://scenes/mushroom.tscn" id="11_vb61r"]
+[ext_resource type="FontFile" uid="uid://do88ooyecefwl" path="res://assets/fonts/Gorditas-Bold.ttf" id="13_fwbl2"]
 
 [sub_resource type="Shader" id="Shader_25mik"]
 code = "shader_type canvas_item;
@@ -105,6 +107,26 @@ position = Vector2(4992, 736)
 [node name="HighPlatform" parent="Level1/Platforms" instance=ExtResource("8_d5ebl")]
 position = Vector2(5696, 800)
 
+[node name="Enemies" type="Node" parent="Level1"]
+
+[node name="Snail" parent="Level1/Enemies" instance=ExtResource("9_jkw21")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(4576, 928)
+
+[node name="Snail2" parent="Level1/Enemies" instance=ExtResource("9_jkw21")]
+z_index = 1
+position = Vector2(672, 392)
+
+[node name="Mushrooms" type="Node" parent="Level1"]
+
+[node name="Mushroom" parent="Level1/Mushrooms" instance=ExtResource("11_vb61r")]
+position = Vector2(1792, 928)
+
+[node name="Finish" parent="Level1" instance=ExtResource("11_npr13")]
+z_index = -1
+position = Vector2(7104, 928)
+
 [node name="Killzone" parent="." instance=ExtResource("7_2a2wm")]
 position = Vector2(480, 1152)
 
@@ -112,14 +134,28 @@ position = Vector2(480, 1152)
 position = Vector2(-2, 0)
 shape = SubResource("WorldBoundaryShape2D_3imwi")
 
-[node name="Snail" parent="." instance=ExtResource("9_jkw21")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4576, 928)
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Snail2" parent="." instance=ExtResource("9_jkw21")]
-z_index = 1
-position = Vector2(672, 392)
+[node name="Panel" type="Panel" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -448.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = 128.0
+grow_horizontal = 0
 
-[node name="Mushroom" parent="." instance=ExtResource("11_vb61r")]
-position = Vector2(160, 928)
+[node name="ScoreLabel" type="Label" parent="UI/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_fwbl2")
+theme_override_font_sizes/font_size = 50
+text = "Score 0"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://cftnj4ygn37ep"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_8csp2"]
+[ext_resource type="Texture2D" uid="uid://chx2m88jmkw7o" path="res://assets/sprites/snail_sprite.png" id="2_51aqi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmx7g"]
+atlas = ExtResource("2_51aqi")
+region = Rect2(0, 0, 311, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljdbh"]
+atlas = ExtResource("2_51aqi")
+region = Rect2(311, 0, 311, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4t5h"]
+atlas = ExtResource("2_51aqi")
+region = Rect2(622, 0, 311, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbbnr"]
+atlas = ExtResource("2_51aqi")
+region = Rect2(933, 0, 311, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxv04"]
+atlas = ExtResource("2_51aqi")
+region = Rect2(1244, 0, 311, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qu7ls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmx7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljdbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4t5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbbnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxv04")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pk400"]
+size = Vector2(192, 256)
+
+[node name="Enemy" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_8csp2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -96)
+sprite_frames = SubResource("SpriteFrames_qu7ls")
+autoplay = "default"
+frame_progress = 0.736436
+
+[node name="RayCastFront" type="RayCast2D" parent="."]
+position = Vector2(-128, -88)
+target_position = Vector2(0, 128)
+
+[node name="RayCastBack" type="RayCast2D" parent="."]
+position = Vector2(176, -88)
+target_position = Vector2(0, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, -96)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_pk400")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

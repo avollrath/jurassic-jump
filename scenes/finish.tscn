@@ -1,0 +1,96 @@
+[gd_scene load_steps=13 format=3 uid="uid://dln7ow5k54uah"]
+
+[ext_resource type="Script" path="res://scripts/finish.gd" id="1_7hoem"]
+[ext_resource type="Texture2D" uid="uid://erpsgf2ju36j" path="res://assets/sprites/finish.png" id="1_doyq7"]
+[ext_resource type="Texture2D" uid="uid://3ygafld370j3" path="res://assets/sprites/fire_sprite.png" id="2_piyo7"]
+[ext_resource type="AudioStream" uid="uid://c224fmsm0vqe3" path="res://assets/sounds/win.mp3" id="4_vhb4v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qghsp"]
+atlas = ExtResource("2_piyo7")
+region = Rect2(0, 0, 65, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_micpm"]
+atlas = ExtResource("2_piyo7")
+region = Rect2(65, 0, 65, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3n15y"]
+atlas = ExtResource("2_piyo7")
+region = Rect2(130, 0, 65, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud5qf"]
+atlas = ExtResource("2_piyo7")
+region = Rect2(195, 0, 65, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h81jb"]
+atlas = ExtResource("2_piyo7")
+region = Rect2(260, 0, 65, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl2sk"]
+atlas = ExtResource("2_piyo7")
+region = Rect2(325, 0, 65, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3fju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qghsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_micpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3n15y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud5qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h81jb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rl2sk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xowfk"]
+size = Vector2(120, 856)
+
+[node name="Finish" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_7hoem")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -456)
+texture = ExtResource("1_doyq7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(-200, 224)
+scale = Vector2(1.54231, 1.54231)
+sprite_frames = SubResource("SpriteFrames_w3fju")
+autoplay = "default"
+frame = 3
+frame_progress = 0.0336275
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(200, 224)
+scale = Vector2(1.54231, 1.54231)
+sprite_frames = SubResource("SpriteFrames_w3fju")
+autoplay = "default"
+frame_progress = 0.47923
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(104, -416)
+shape = SubResource("RectangleShape2D_xowfk")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="WinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vhb4v")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

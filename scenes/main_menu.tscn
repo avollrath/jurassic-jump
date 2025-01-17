@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://75e4pjjygybg"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_cg51m"]
+[ext_resource type="Texture2D" uid="uid://evmb2bn5tut4" path="res://assets/sprites/menu_frame.png" id="1_y4gav"]
+[ext_resource type="Texture2D" uid="uid://cw6sjov2nii38" path="res://assets/sprites/logo.png" id="2_6t7kt"]
+[ext_resource type="FontFile" uid="uid://dipkhtx5t332r" path="res://assets/fonts/Gorditas-Regular.ttf" id="3_gxeml"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7irf5"]
+bg_color = Color(0.909897, 0.454505, 0.158511, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="main_menu" type="Node"]
+script = ExtResource("1_cg51m")
+
+[node name="Frame" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -470.0
+offset_top = -416.0
+offset_right = 447.0
+offset_bottom = 454.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y4gav")
+
+[node name="Logo" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = 21.0
+offset_right = 240.0
+offset_bottom = 427.0
+grow_horizontal = 2
+texture = ExtResource("2_6t7kt")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = -73.5
+offset_right = 205.0
+offset_bottom = 73.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_gxeml")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7irf5")
+text = "Start Game"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
-@onready var die_sound: AudioStreamPlayer2D = $DieSound
+@onready var die_sound: AudioStreamPlayer = $DieSound
 
 func _on_body_entered(body: Node2D) -> void:
 	die_sound.play()
