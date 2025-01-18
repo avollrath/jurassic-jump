@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bolb5lmyjtskm"]
+[gd_scene load_steps=21 format=3 uid="uid://bolb5lmyjtskm"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_gfpll"]
 [ext_resource type="Texture2D" uid="uid://c28dbf8aerr3p" path="res://assets/sprites/background2.jpg" id="2_laxxq"]
@@ -7,13 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://do00t2ki36mvf" path="res://scenes/coin.tscn" id="5_3s2uf"]
 [ext_resource type="PackedScene" uid="uid://yusph54xosra" path="res://scenes/ground.tscn" id="6_urbbt"]
 [ext_resource type="PackedScene" uid="uid://dmdftj6ddc66i" path="res://scenes/platform.tscn" id="7_ph4uu"]
+[ext_resource type="PackedScene" uid="uid://cer4nbmqxs8e0" path="res://scenes/cloud.tscn" id="7_tkhbw"]
 [ext_resource type="PackedScene" uid="uid://c7d7bq3wwuvad" path="res://scenes/high_platform.tscn" id="8_4akgg"]
 [ext_resource type="PackedScene" uid="uid://cftnj4ygn37ep" path="res://scenes/enemy.tscn" id="9_fm03y"]
+[ext_resource type="PackedScene" uid="uid://d2ige6fda56ty" path="res://scenes/spikey_enemy.tscn" id="10_md03c"]
 [ext_resource type="PackedScene" uid="uid://0hdyud3pqhlu" path="res://scenes/mushroom.tscn" id="10_q5u2r"]
 [ext_resource type="PackedScene" uid="uid://dln7ow5k54uah" path="res://scenes/finish.tscn" id="11_63pl8"]
 [ext_resource type="PackedScene" uid="uid://b3kiul8e7ijxt" path="res://scenes/killzone.tscn" id="12_m33b7"]
 [ext_resource type="PackedScene" uid="uid://75e4pjjygybg" path="res://scenes/main_menu.tscn" id="12_re2wc"]
 [ext_resource type="FontFile" uid="uid://do88ooyecefwl" path="res://assets/fonts/Gorditas-Bold.ttf" id="13_6e7j0"]
+[ext_resource type="AudioStream" uid="uid://cr5jd7qi3h4py" path="res://assets/music/backgroundMusic1.mp3" id="13_6kkwd"]
 
 [sub_resource type="Shader" id="Shader_25mik"]
 code = "shader_type canvas_item;
@@ -69,13 +72,148 @@ DECELERATION = 500.0
 [node name="Coins" type="Node" parent="Level1"]
 
 [node name="Coin" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(832, 768)
+position = Vector2(1461, 387)
 
 [node name="Coin2" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(928, 768)
+position = Vector2(1557, 387)
 
 [node name="Coin3" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(1024, 768)
+position = Vector2(1653, 387)
+
+[node name="Coin4" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2229, 590)
+
+[node name="Coin5" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2325, 590)
+
+[node name="Coin6" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2421, 590)
+
+[node name="Coin7" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2229, 476)
+
+[node name="Coin8" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2325, 476)
+
+[node name="Coin9" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2421, 476)
+
+[node name="Coin10" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2229, 362)
+
+[node name="Coin11" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2325, 362)
+
+[node name="Coin12" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(2421, 362)
+
+[node name="Coin13" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(4178, 171)
+
+[node name="Coin14" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(4274, 171)
+
+[node name="Coin15" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(4370, 171)
+
+[node name="Coin16" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(4178, 57)
+
+[node name="Coin17" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(4274, 57)
+
+[node name="Coin18" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(4370, 57)
+
+[node name="Coin19" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(6518, 562)
+
+[node name="Coin20" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(6614, 562)
+
+[node name="Coin21" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(6710, 562)
+
+[node name="Coin22" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(6518, 448)
+
+[node name="Coin23" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(6614, 448)
+
+[node name="Coin24" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(6710, 448)
+
+[node name="Coin25" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(7377, 308)
+
+[node name="Coin26" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(7473, 308)
+
+[node name="Coin27" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(7569, 308)
+
+[node name="Coin28" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(7377, 194)
+
+[node name="Coin29" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(7473, 194)
+
+[node name="Coin30" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(7569, 194)
+
+[node name="Coin31" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(8959, 318)
+
+[node name="Coin32" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(9055, 318)
+
+[node name="Coin33" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(9151, 318)
+
+[node name="Coin34" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(8959, 204)
+
+[node name="Coin35" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(9055, 204)
+
+[node name="Coin36" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(9151, 204)
+
+[node name="Coin37" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(9978, 582)
+
+[node name="Coin38" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(10074, 582)
+
+[node name="Coin39" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(10170, 582)
+
+[node name="Coin40" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(9978, 468)
+
+[node name="Coin41" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(10074, 468)
+
+[node name="Coin42" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(10170, 468)
+
+[node name="Coin43" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(11791, 613)
+
+[node name="Coin44" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(11887, 613)
+
+[node name="Coin45" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(11983, 613)
+
+[node name="Coin46" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(11791, 499)
+
+[node name="Coin47" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(11887, 499)
+
+[node name="Coin48" parent="Level1/Coins" instance=ExtResource("5_3s2uf")]
+position = Vector2(11983, 499)
 
 [node name="Grounds" type="Node" parent="Level1"]
 
@@ -83,52 +221,135 @@ position = Vector2(1024, 768)
 position = Vector2(611, 1095)
 
 [node name="Ground2" parent="Level1/Grounds" instance=ExtResource("6_urbbt")]
-position = Vector2(2080, 1095)
+position = Vector2(2480, 1095)
 
 [node name="Ground3" parent="Level1/Grounds" instance=ExtResource("6_urbbt")]
-position = Vector2(4288, 1095)
+position = Vector2(6104, 1095)
 
 [node name="Ground4" parent="Level1/Grounds" instance=ExtResource("6_urbbt")]
-position = Vector2(7072, 1095)
+position = Vector2(13262, 1095)
+
+[node name="Clouds" type="Node" parent="Level1/Grounds/Ground4"]
+
+[node name="Cloud" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(608, 224)
+
+[node name="Cloud2" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(2624, 320)
+
+[node name="Cloud3" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(4544, 256)
+
+[node name="Cloud4" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(5184, 384)
+
+[node name="Cloud5" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(6368, 320)
+
+[node name="Cloud6" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(8384, 320)
+
+[node name="Cloud7" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(9408, 256)
+
+[node name="Cloud8" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(11029, 263)
+
+[node name="Cloud9" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(12644, 250)
+
+[node name="Cloud10" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(14460, 250)
+
+[node name="Cloud11" parent="Level1/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
+z_index = -5
+position = Vector2(15725, 270)
+
+[node name="Ground5" parent="Level1/Grounds" instance=ExtResource("6_urbbt")]
+position = Vector2(11326, 1095)
 
 [node name="Platforms" type="Node" parent="Level1"]
 
 [node name="Platform" parent="Level1/Platforms" instance=ExtResource("7_ph4uu")]
 position = Vector2(2848, 704)
 
-[node name="Platform4" parent="Level1/Platforms" instance=ExtResource("7_ph4uu")]
-position = Vector2(704, 480)
-
 [node name="Platform2" parent="Level1/Platforms" instance=ExtResource("7_ph4uu")]
-position = Vector2(3424, 384)
+position = Vector2(5035, 686)
+
+[node name="Platform5" parent="Level1/Platforms" instance=ExtResource("7_ph4uu")]
+position = Vector2(4272, 346)
 
 [node name="Platform3" parent="Level1/Platforms" instance=ExtResource("7_ph4uu")]
-position = Vector2(4992, 736)
+position = Vector2(8217, 718)
+
+[node name="Platform6" parent="Level1/Platforms" instance=ExtResource("7_ph4uu")]
+position = Vector2(9885, 1000)
 
 [node name="HighPlatform" parent="Level1/Platforms" instance=ExtResource("8_4akgg")]
-position = Vector2(5696, 800)
+position = Vector2(3557, 800)
+
+[node name="HighPlatform2" parent="Level1/Platforms" instance=ExtResource("8_4akgg")]
+position = Vector2(7465, 813)
+
+[node name="HighPlatform3" parent="Level1/Platforms" instance=ExtResource("8_4akgg")]
+position = Vector2(9055, 836)
 
 [node name="Enemies" type="Node" parent="Level1"]
 
-[node name="Snail" parent="Level1/Enemies" instance=ExtResource("9_fm03y")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(4576, 928)
-
 [node name="Snail2" parent="Level1/Enemies" instance=ExtResource("9_fm03y")]
 z_index = 1
-position = Vector2(672, 392)
+position = Vector2(2828, 617)
+
+[node name="Enemy" parent="Level1/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(11375, 931)
+
+[node name="SpikeyEnemy" parent="Level1/Enemies" instance=ExtResource("10_md03c")]
+position = Vector2(6226, 939)
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy2" parent="Level1/Enemies" instance=ExtResource("10_md03c")]
+position = Vector2(2750, 944)
+SPEED = 80
+can_be_stomped = false
 
 [node name="Mushrooms" type="Node" parent="Level1"]
 
 [node name="Mushroom" parent="Level1/Mushrooms" instance=ExtResource("10_q5u2r")]
 z_index = -1
-position = Vector2(1792, 932)
+position = Vector2(1113, 942)
+
+[node name="Mushroom2" parent="Level1/Mushrooms" instance=ExtResource("10_q5u2r")]
+z_index = -1
+position = Vector2(2323, 942)
+
+[node name="Mushroom3" parent="Level1/Mushrooms" instance=ExtResource("10_q5u2r")]
+z_index = -1
+position = Vector2(6642, 942)
+
+[node name="Mushroom4" parent="Level1/Mushrooms" instance=ExtResource("10_q5u2r")]
+z_index = -1
+position = Vector2(10067, 916)
+
+[node name="Mushroom5" parent="Level1/Mushrooms" instance=ExtResource("10_q5u2r")]
+z_index = -1
+position = Vector2(11884, 926)
 
 [node name="Finish" parent="Level1" instance=ExtResource("11_63pl8")]
 z_index = -1
-position = Vector2(7104, 928)
+position = Vector2(13294, 928)
 target_level = ExtResource("12_re2wc")
+target_level_music = ExtResource("13_6kkwd")
 
 [node name="Killzone" parent="." instance=ExtResource("12_m33b7")]
 position = Vector2(480, 1152)

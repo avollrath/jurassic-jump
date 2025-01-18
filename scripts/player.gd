@@ -35,6 +35,28 @@ func _physics_process(delta: float) -> void:
 # Function to handle jumping.
 func jump(custom_jump_velocity: float = JUMP_VELOCITY) -> void:
 	if is_on_floor():
+		print("Floor jump! " + str(JUMP_VELOCITY))
 		velocity.y = JUMP_VELOCITY
 	else:
+		velocity.y = 0
 		velocity.y = custom_jump_velocity
+		print("Air jump! " + str(custom_jump_velocity))
+
+func level_finish_animation() -> void:
+	set_physics_process(false)
+	velocity.x = 0
+	velocity.y = 0
+	# Create a new Tween.
+	var tween = get_tree().create_tween().set_parallel(true)
+
+	# Start parallel mode for subsequent tweens.
+
+	tween.tween_property($AnimatedSprite2D, "scale", Vector2(0.3, 0.3), 1.0)
+	tween.tween_property($AnimatedSprite2D, "modulate:a", 0, 2)
+	tween.tween_property($AnimatedSprite2D, "rotation_degrees", 1080, 1.0).set_ease(Tween.EASE_IN)
+	tween.tween_property(
+		$AnimatedSprite2D, 
+		"position:y", 
+		$AnimatedSprite2D.position.y - 100, 
+		1.0
+	).set_ease(Tween.EASE_IN)

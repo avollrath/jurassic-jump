@@ -1,10 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://dbg6pn3l745r8"]
+[gd_scene load_steps=24 format=3 uid="uid://dbg6pn3l745r8"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_1w478"]
 [ext_resource type="PackedScene" uid="uid://y8jax64gdbgg" path="res://scenes/player.tscn" id="1_6gi5y"]
 [ext_resource type="Texture2D" uid="uid://cjst0l3ytij0" path="res://assets/sprites/background1.jpg" id="2_wkxea"]
+[ext_resource type="PackedScene" uid="uid://cer4nbmqxs8e0" path="res://scenes/cloud.tscn" id="3_gyoxx"]
 [ext_resource type="PackedScene" uid="uid://yusph54xosra" path="res://scenes/ground.tscn" id="3_qdm1x"]
+[ext_resource type="Texture2D" uid="uid://bs1ksqgkee5e4" path="res://assets/sprites/tree.png" id="3_tdi0r"]
 [ext_resource type="Texture2D" uid="uid://pgwvw0yljs5u" path="res://assets/sprites/pillar.png" id="4_7aud8"]
+[ext_resource type="Texture2D" uid="uid://d04brwg3466qo" path="res://assets/sprites/foreground1_blur.png" id="4_80g5c"]
+[ext_resource type="Texture2D" uid="uid://dtw03u0fhqyty" path="res://assets/sprites/foreground1.png" id="4_kiwoy"]
 [ext_resource type="PackedScene" uid="uid://dmdftj6ddc66i" path="res://scenes/platform.tscn" id="5_ft028"]
 [ext_resource type="PackedScene" uid="uid://do00t2ki36mvf" path="res://scenes/coin.tscn" id="6_l1upn"]
 [ext_resource type="PackedScene" uid="uid://b3kiul8e7ijxt" path="res://scenes/killzone.tscn" id="7_2a2wm"]
@@ -13,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dln7ow5k54uah" path="res://scenes/finish.tscn" id="11_npr13"]
 [ext_resource type="PackedScene" uid="uid://0hdyud3pqhlu" path="res://scenes/mushroom.tscn" id="11_vb61r"]
 [ext_resource type="PackedScene" uid="uid://bolb5lmyjtskm" path="res://scenes/level2.tscn" id="12_shv5m"]
+[ext_resource type="AudioStream" uid="uid://djco8yw50comu" path="res://assets/music/backgroundMusic2.mp3" id="13_31rhy"]
 [ext_resource type="FontFile" uid="uid://do88ooyecefwl" path="res://assets/fonts/Gorditas-Bold.ttf" id="13_fwbl2"]
 [ext_resource type="Texture2D" uid="uid://cr2xjbppxfthf" path="res://assets/sprites/life.png" id="15_p02fj"]
 
@@ -47,25 +52,79 @@ script = ExtResource("1_1w478")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Level"]
 
-[node name="Background1" type="Sprite2D" parent="Level/ParallaxBackground"]
+[node name="Background" type="Sprite2D" parent="Level/ParallaxBackground"]
 material = SubResource("ShaderMaterial_7yudl")
 texture = ExtResource("2_wkxea")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Level/ParallaxBackground"]
-motion_scale = Vector2(0.7, 0.7)
+[node name="ParallaxLayer -3" type="ParallaxLayer" parent="Level/ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
 
-[node name="Pillar" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer"]
+[node name="Tree" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
+position = Vector2(2496, 608)
+scale = Vector2(1.42308, 1.42308)
+texture = ExtResource("3_tdi0r")
+
+[node name="ParallaxLayer -2" type="ParallaxLayer" parent="Level/ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Pillar" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -2"]
 position = Vector2(1248, 608)
 texture = ExtResource("4_7aud8")
 
-[node name="Player" parent="Level" instance=ExtResource("1_6gi5y")]
-z_index = 5
-position = Vector2(349, 422)
-SPEED = 600.0
-JUMP_VELOCITY = -1400.0
-DECELERATION = 500.0
+[node name="ParallaxForeground" type="ParallaxBackground" parent="Level"]
+layer = 10
+
+[node name="ParallaxLayer 1" type="ParallaxLayer" parent="Level/ParallaxForeground"]
+z_index = 10
+motion_scale = Vector2(1.3, 1.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(2464, 992)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("4_80g5c")
+flip_v = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.356263, 0.196213, 0.14258, 1)
+z_index = 1
+position = Vector2(7616, 992)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("4_kiwoy")
+flip_v = true
+
+[node name="Clouds" type="Node" parent="Level"]
+
+[node name="Cloud" parent="Level/Clouds" instance=ExtResource("3_gyoxx")]
+z_index = -5
+position = Vector2(608, 224)
+
+[node name="Cloud2" parent="Level/Clouds" instance=ExtResource("3_gyoxx")]
+z_index = -5
+position = Vector2(2624, 320)
+
+[node name="Cloud3" parent="Level/Clouds" instance=ExtResource("3_gyoxx")]
+z_index = -5
+position = Vector2(4544, 256)
+
+[node name="Cloud4" parent="Level/Clouds" instance=ExtResource("3_gyoxx")]
+z_index = -5
+position = Vector2(5184, 384)
+
+[node name="Cloud5" parent="Level/Clouds" instance=ExtResource("3_gyoxx")]
+z_index = -5
+position = Vector2(6368, 320)
+
+[node name="Cloud6" parent="Level/Clouds" instance=ExtResource("3_gyoxx")]
+z_index = -5
+position = Vector2(8384, 320)
+
+[node name="Cloud7" parent="Level/Clouds" instance=ExtResource("3_gyoxx")]
+z_index = -5
+position = Vector2(9408, 256)
 
 [node name="Coins" type="Node" parent="Level"]
 
@@ -98,7 +157,7 @@ position = Vector2(7072, 1095)
 position = Vector2(2848, 704)
 
 [node name="Platform4" parent="Level/Platforms" instance=ExtResource("5_ft028")]
-position = Vector2(704, 480)
+position = Vector2(2400, 256)
 
 [node name="Platform2" parent="Level/Platforms" instance=ExtResource("5_ft028")]
 position = Vector2(3424, 384)
@@ -115,6 +174,7 @@ position = Vector2(5696, 800)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(4576, 928)
+SPEED = 10
 
 [node name="Snail2" parent="Level/Enemies" instance=ExtResource("9_jkw21")]
 z_index = 1
@@ -127,10 +187,18 @@ SPEED = 50
 z_index = -1
 position = Vector2(1792, 932)
 
+[node name="Player" parent="Level" instance=ExtResource("1_6gi5y")]
+z_index = 5
+position = Vector2(192, 416)
+SPEED = 600.0
+JUMP_VELOCITY = -1400.0
+DECELERATION = 500.0
+
 [node name="Finish" parent="Level" instance=ExtResource("11_npr13")]
 z_index = -1
 position = Vector2(7104, 928)
 target_level = ExtResource("12_shv5m")
+target_level_music = ExtResource("13_31rhy")
 
 [node name="Killzone" parent="." instance=ExtResource("7_2a2wm")]
 position = Vector2(480, 1152)

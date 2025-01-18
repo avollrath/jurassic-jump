@@ -47,7 +47,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pk400"]
-size = Vector2(192, 256)
+size = Vector2(176, 248)
 
 [node name="Enemy" type="Area2D"]
 collision_mask = 2
@@ -68,7 +68,7 @@ position = Vector2(176, -88)
 target_position = Vector2(0, 128)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(24, -96)
+position = Vector2(20, -96)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_pk400")
 

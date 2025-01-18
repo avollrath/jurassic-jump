@@ -4,7 +4,7 @@ extends Area2D
 @onready var die_sound: AudioStreamPlayer = $DieSound
 
 func _on_body_entered(body: Node2D) -> void:
-	die_sound.play()
+	AudioManager.die_sound.play()
 	Engine.time_scale = 0.5
 	body.get_node("CollisionShape2D").queue_free()
 	body.get_node("AnimatedSprite2D").rotation_degrees = -77
