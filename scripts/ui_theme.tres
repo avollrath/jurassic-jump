@@ -1,0 +1,61 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ctns4fvpvo0gj"]
+
+[ext_resource type="FontFile" uid="uid://dipkhtx5t332r" path="res://assets/fonts/Gorditas-Regular.ttf" id="1_6rt2l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6twxr"]
+bg_color = Color(0.869588, 0.426209, 0.12708, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.963524, 0.516349, 0.245412, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.0901961)
+shadow_size = 2
+shadow_offset = Vector2(0, 4)
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dw488"]
+content_margin_top = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.909804, 0.454902, 0.156863, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.98253, 0.604128, 0.39323, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.0901961)
+shadow_size = 4
+shadow_offset = Vector2(0, 4)
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5057s"]
+bg_color = Color(0.909804, 0.454902, 0.156863, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.98253, 0.604128, 0.39323, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.0901961)
+shadow_size = 4
+shadow_offset = Vector2(0, 4)
+anti_aliasing_size = 0.01
+
+[resource]
+default_font = ExtResource("1_6rt2l")
+default_font_size = 16
+Button/font_sizes/font_size = 48
+Button/styles/hover = SubResource("StyleBoxFlat_6twxr")
+Button/styles/normal = SubResource("StyleBoxFlat_dw488")
+Button/styles/pressed = SubResource("StyleBoxFlat_5057s")

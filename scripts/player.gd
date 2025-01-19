@@ -1,39 +1,53 @@
 extends CharacterBody2D
 @onready var flicker_timer: Timer = $FlickerTimer
-@onready var particles: GPUParticles2D = $GPUParticles2D
+@onready var particles: GPUParticles2D = $FightParticles
+@onready var wheels_particles: GPUParticles2D = $WheelsParticles
+
 @onready var timer: Timer = $Timer
 @export var SPEED = 400.0
 @export var JUMP_VELOCITY = -1400.0
 @export var DECELERATION = 200.0  # Rate of slowing down when no input is provided.
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var player_got_hit: bool = false
+var was_in_air: bool = false
+var just_landed: bool = false
 
 func _physics_process(delta: float) -> void:
-	# Add gravity.
+	# 1) Apply gravity if not on floor
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
+	# 2) Handle horizontal movement
 	if not player_got_hit:
+		var direction := Input.get_axis("move_left", "move_right")
+
+		if direction != 0:
+			velocity.x = direction * SPEED
+			animated_sprite.flip_h = (direction < 0)
+		else:
+			velocity.x = move_toward(velocity.x, 0, DECELERATION * delta)
+
+		# Jump
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			jump()
 			AudioManager.jump_sound.play()
 
-		# Get the input direction.
-		var direction := Input.get_axis("move_left", "move_right")
-		
-		if direction > 0:
-			animated_sprite.flip_h = false
-		elif direction < 0:
-			animated_sprite.flip_h = true
-
-		if direction != 0:
-			# Apply movement.
-			velocity.x = direction * SPEED
-		else:
-			# Decelerate smoothly when no input is provided.
-			velocity.x = move_toward(velocity.x, 0, DECELERATION * delta)
-
+	# 3) Move and slide here so collisions are calculated
 	move_and_slide()
+
+	# 4) Now `is_on_floor()` is up-to-date
+	var on_floor_now = is_on_floor()
+	if was_in_air and on_floor_now:
+		print("Just landed")
+		just_landed = true
+		wheels_particles.emitting = true
+		AudioManager.land_sound.play()
+	else:
+		just_landed = false
+
+	# 5) Update was_in_air
+	was_in_air = not on_floor_now
+
 
 # Function to handle jumping.
 func jump(custom_jump_velocity: float = JUMP_VELOCITY) -> void:

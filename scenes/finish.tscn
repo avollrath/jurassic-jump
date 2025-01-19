@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dln7ow5k54uah"]
+[gd_scene load_steps=19 format=3 uid="uid://dln7ow5k54uah"]
 
 [ext_resource type="Script" path="res://scripts/finish.gd" id="1_7hoem"]
 [ext_resource type="Texture2D" uid="uid://erpsgf2ju36j" path="res://assets/sprites/finish.png" id="1_doyq7"]
 [ext_resource type="Texture2D" uid="uid://3ygafld370j3" path="res://assets/sprites/fire_sprite.png" id="2_piyo7"]
+[ext_resource type="Texture2D" uid="uid://hp3b7a57d8dv" path="res://assets/sprites/finish_particles_sprite.png" id="4_t87su"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qghsp"]
 atlas = ExtResource("2_piyo7")
@@ -57,6 +58,45 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xowfk"]
 size = Vector2(120, 856)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6s44q"]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_petd8"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.730612, 0.648352), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.72781, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_oo4wk"]
+curve = SubResource("Curve_petd8")
+
+[sub_resource type="Gradient" id="Gradient_hpor6"]
+offsets = PackedFloat32Array(0, 0.700461, 1)
+colors = PackedColorArray(0.00158552, 0.222087, 0.814522, 1, 0, 0.6545, 0.77, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6nxha"]
+gradient = SubResource("Gradient_hpor6")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sy14j"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(50, 100, 1)
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 20.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_6nxha")
+alpha_curve = SubResource("CurveTexture_oo4wk")
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+turbulence_enabled = true
+turbulence_influence_min = 0.01
+
 [node name="Finish" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_7hoem")
@@ -86,6 +126,17 @@ position = Vector2(104, -416)
 shape = SubResource("RectangleShape2D_xowfk")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Glow" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_6s44q")
+position = Vector2(0, -224)
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_sy14j")
+texture = ExtResource("4_t87su")
+lifetime = 2.0
+explosiveness = 0.05
+randomness = 0.5
+fixed_fps = 60
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

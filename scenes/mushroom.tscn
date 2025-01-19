@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://0hdyud3pqhlu"]
+[gd_scene load_steps=17 format=3 uid="uid://0hdyud3pqhlu"]
 
 [ext_resource type="Script" path="res://scripts/mushroom.gd" id="1_2csl4"]
 [ext_resource type="Texture2D" uid="uid://d3n0y4kqxgqxp" path="res://assets/sprites/mushroom_sprite.png" id="2_ngifg"]
+[ext_resource type="Texture2D" uid="uid://qnmxkpwhiaja" path="res://assets/sprites/Particles/star_04.png" id="3_5i621"]
+[ext_resource type="Texture2D" uid="uid://btplsxv5fe1jo" path="res://assets/sprites/Particles/circle_05.png" id="4_at4d1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b1q4s"]
 atlas = ExtResource("2_ngifg")
@@ -42,6 +44,40 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l0o60"]
 size = Vector2(302, 12.5)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jg30l"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_8eu8y"]
+_data = [Vector2(0, 0), 0.0, 12.4821, 0, 0, Vector2(0.253219, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.58461, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_7q28j"]
+curve = SubResource("Curve_8eu8y")
+
+[sub_resource type="Gradient" id="Gradient_a6a81"]
+offsets = PackedFloat32Array(0, 0.107317, 0.22439, 0.317073, 0.463415, 0.614634, 0.736585, 0.863415, 0.921951, 1)
+colors = PackedColorArray(1, 0, 0, 1, 0.83802, 0.702859, 0, 1, 0.870588, 0, 0.203922, 1, 0.52549, 0, 1, 1, 1, 1, 0, 1, 0.870588, 0, 0.203922, 1, 1, 1, 0, 1, 0.52549, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8d1vb"]
+gradient = SubResource("Gradient_a6a81")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dhjhj"]
+particle_flag_align_y = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(140, 1, 1)
+angle_min = -294.4
+angle_max = 283.7
+direction = Vector3(0, -1, 0)
+spread = 10.0
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, -1, 0)
+scale_min = 0.02
+scale_max = 0.1
+color_ramp = SubResource("GradientTexture1D_8d1vb")
+alpha_curve = SubResource("CurveTexture_7q28j")
+
 [node name="Mushroom" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_2csl4")
@@ -53,6 +89,26 @@ sprite_frames = SubResource("SpriteFrames_70cmn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -183)
 shape = SubResource("RectangleShape2D_l0o60")
+
+[node name="BounceParticles" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_jg30l")
+position = Vector2(-3, -118)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_dhjhj")
+texture = ExtResource("3_5i621")
+lifetime = 3.0
+preprocess = 5.0
+randomness = 0.5
+
+[node name="BounceParticles2" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_jg30l")
+position = Vector2(-1, -118)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_dhjhj")
+texture = ExtResource("4_at4d1")
+lifetime = 3.0
+preprocess = 5.0
+randomness = 0.5
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

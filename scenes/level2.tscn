@@ -1,10 +1,14 @@
-[gd_scene load_steps=22 format=3 uid="uid://bolb5lmyjtskm"]
+[gd_scene load_steps=29 format=3 uid="uid://bolb5lmyjtskm"]
 
-[ext_resource type="Texture2D" uid="uid://c28dbf8aerr3p" path="res://assets/sprites/background2.jpg" id="2_laxxq"]
-[ext_resource type="Texture2D" uid="uid://pgwvw0yljs5u" path="res://assets/sprites/pillar.png" id="3_q6xax"]
+[ext_resource type="Texture2D" uid="uid://cvkwjal2xltj3" path="res://assets/sprites/blurred assets/background2.jpg" id="1_3x5m2"]
+[ext_resource type="Texture2D" uid="uid://brgnt4q6qnqv4" path="res://assets/sprites/blurred assets/rex-skeleton.png" id="3_ho68k"]
+[ext_resource type="Texture2D" uid="uid://bhwgt2upnwn86" path="res://assets/sprites/blurred assets/tree.png" id="4_uo3v1"]
 [ext_resource type="PackedScene" uid="uid://y8jax64gdbgg" path="res://scenes/player.tscn" id="4_uwk6m"]
+[ext_resource type="Texture2D" uid="uid://bu3d6glcpuflc" path="res://assets/sprites/blurred assets/pillar.png" id="5_1rg6l"]
 [ext_resource type="PackedScene" uid="uid://do00t2ki36mvf" path="res://scenes/coin.tscn" id="5_3s2uf"]
+[ext_resource type="Texture2D" uid="uid://dquq4j71ya11o" path="res://assets/sprites/blurred assets/foreground1.png" id="6_6stbm"]
 [ext_resource type="PackedScene" uid="uid://yusph54xosra" path="res://scenes/ground.tscn" id="6_urbbt"]
+[ext_resource type="Texture2D" uid="uid://ch6ldm3tvru8n" path="res://assets/sprites/foreground/fern.png" id="7_a5pb2"]
 [ext_resource type="PackedScene" uid="uid://dmdftj6ddc66i" path="res://scenes/platform.tscn" id="7_ph4uu"]
 [ext_resource type="PackedScene" uid="uid://cer4nbmqxs8e0" path="res://scenes/cloud.tscn" id="7_tkhbw"]
 [ext_resource type="PackedScene" uid="uid://c7d7bq3wwuvad" path="res://scenes/high_platform.tscn" id="8_4akgg"]
@@ -14,9 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://dln7ow5k54uah" path="res://scenes/finish.tscn" id="11_63pl8"]
 [ext_resource type="AudioStream" uid="uid://byntc27wv4rkc" path="res://assets/sounds/snail.mp3" id="11_kvlwm"]
 [ext_resource type="PackedScene" uid="uid://b3kiul8e7ijxt" path="res://scenes/killzone.tscn" id="12_m33b7"]
-[ext_resource type="PackedScene" uid="uid://75e4pjjygybg" path="res://scenes/main_menu.tscn" id="12_re2wc"]
-[ext_resource type="AudioStream" uid="uid://cr5jd7qi3h4py" path="res://assets/music/backgroundMusic1.mp3" id="13_6kkwd"]
 [ext_resource type="AudioStream" uid="uid://vb2jkglo56t2" path="res://assets/sounds/spikey.mp3" id="13_hmvq3"]
+[ext_resource type="PackedScene" uid="uid://b8g0ruq2sl6f1" path="res://scenes/level3.tscn" id="19_2t3fm"]
+[ext_resource type="AudioStream" uid="uid://nnfm371qthfy" path="res://assets/music/backgroundMusic3.mp3" id="20_g41uq"]
 
 [sub_resource type="GDScript" id="GDScript_y3cvm"]
 
@@ -35,9 +39,45 @@ void fragment() {
 //}
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yudl"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a6atj"]
 shader = SubResource("Shader_25mik")
 shader_parameter/blur_amount = Vector2(0.01, 0.01)
+
+[sub_resource type="Animation" id="Animation_k4opp"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.390954, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_xjjj2"]
+resource_name = "sway"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.261799, -0.25, 0, 0.25, 0, 0.261799, -0.25, 0, 0.25, 0, -0.261799, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10, 20)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ei7cw"]
+_data = {
+"RESET": SubResource("Animation_k4opp"),
+"sway": SubResource("Animation_xjjj2")
+}
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3imwi"]
 
@@ -48,18 +88,229 @@ script = SubResource("GDScript_y3cvm")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Level"]
 
-[node name="Background1" type="Sprite2D" parent="Level/ParallaxBackground"]
-material = SubResource("ShaderMaterial_7yudl")
-texture = ExtResource("2_laxxq")
+[node name="Background" type="Sprite2D" parent="Level/ParallaxBackground"]
+material = SubResource("ShaderMaterial_a6atj")
+texture = ExtResource("1_3x5m2")
 centered = false
-metadata/_edit_lock_ = true
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Level/ParallaxBackground"]
-motion_scale = Vector2(0.7, 0.7)
+[node name="ParallaxLayer - 4" type="ParallaxLayer" parent="Level/ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
 
-[node name="Pillar" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer"]
-position = Vector2(1248, 608)
-texture = ExtResource("3_q6xax")
+[node name="Cloud" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("7_tkhbw")]
+position = Vector2(1270, 264)
+
+[node name="Cloud2" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("7_tkhbw")]
+position = Vector2(2757, 219)
+
+[node name="Cloud3" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("7_tkhbw")]
+position = Vector2(4544, 256)
+
+[node name="Cloud4" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("7_tkhbw")]
+position = Vector2(5248, 320)
+
+[node name="Cloud5" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("7_tkhbw")]
+position = Vector2(6368, 320)
+
+[node name="Cloud6" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("7_tkhbw")]
+position = Vector2(8384, 320)
+
+[node name="Cloud7" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("7_tkhbw")]
+position = Vector2(9408, 256)
+
+[node name="ParallaxLayer -3" type="ParallaxLayer" parent="Level/ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="Skeleton" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
+position = Vector2(2279.78, 640.464)
+scale = Vector2(1.35386, 1.35386)
+texture = ExtResource("3_ho68k")
+
+[node name="Tree" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
+position = Vector2(8100, 608)
+scale = Vector2(1.42308, 1.42308)
+texture = ExtResource("4_uo3v1")
+
+[node name="ParallaxLayer -2" type="ParallaxLayer" parent="Level/ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Pillar" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -2"]
+position = Vector2(5845, 608)
+texture = ExtResource("5_1rg6l")
+
+[node name="Pillar2" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -2"]
+position = Vector2(3968, 704)
+texture = ExtResource("5_1rg6l")
+
+[node name="ParallaxForeground" type="ParallaxBackground" parent="Level"]
+layer = 10
+
+[node name="ParallaxLayer 1" type="ParallaxLayer" parent="Level/ParallaxForeground"]
+z_index = 10
+motion_scale = Vector2(1.3, 1.3)
+
+[node name="Foreground" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(2464, 992)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_6stbm")
+flip_v = true
+
+[node name="Foreground2" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(7648, 992)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_6stbm")
+flip_v = true
+
+[node name="Foreground3" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(12752, 992)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_6stbm")
+flip_v = true
+
+[node name="ParallaxLayer 2" type="ParallaxLayer" parent="Level/ParallaxForeground"]
+z_index = 10
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Fern" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(5024, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern2" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(3136, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern2"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern4" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(8926.64, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern4"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern5" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(7038.64, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern5"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern6" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(12308.6, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern6"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern7" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(10420.6, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern7"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern8" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(14075, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern8"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern3" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(774, 1355)
+rotation = -0.390954
+scale = Vector2(1.55135, -1.55135)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern3"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
 
 [node name="Player" parent="Level" instance=ExtResource("4_uwk6m")]
 z_index = 5
@@ -228,52 +479,6 @@ position = Vector2(6104, 1095)
 [node name="Ground4" parent="Level/Grounds" instance=ExtResource("6_urbbt")]
 position = Vector2(13262, 1095)
 
-[node name="Clouds" type="Node" parent="Level/Grounds/Ground4"]
-
-[node name="Cloud" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(608, 224)
-
-[node name="Cloud2" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(2624, 320)
-
-[node name="Cloud3" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(4544, 256)
-
-[node name="Cloud4" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(5184, 384)
-
-[node name="Cloud5" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(6368, 320)
-
-[node name="Cloud6" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(8384, 320)
-
-[node name="Cloud7" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(9408, 256)
-
-[node name="Cloud8" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(11029, 263)
-
-[node name="Cloud9" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(12644, 250)
-
-[node name="Cloud10" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(14460, 250)
-
-[node name="Cloud11" parent="Level/Grounds/Ground4/Clouds" instance=ExtResource("7_tkhbw")]
-z_index = -5
-position = Vector2(15725, 270)
-
 [node name="Ground5" parent="Level/Grounds" instance=ExtResource("6_urbbt")]
 position = Vector2(11326, 1095)
 
@@ -351,8 +556,8 @@ position = Vector2(11884, 926)
 [node name="Finish" parent="Level" instance=ExtResource("11_63pl8")]
 z_index = -1
 position = Vector2(13294, 928)
-target_level = ExtResource("12_re2wc")
-target_level_music = ExtResource("13_6kkwd")
+target_level = ExtResource("19_2t3fm")
+target_level_music = ExtResource("20_g41uq")
 
 [node name="SpawnPoint" type="Marker2D" parent="Level"]
 position = Vector2(192, 512)

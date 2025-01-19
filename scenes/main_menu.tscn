@@ -1,65 +1,110 @@
 [gd_scene load_steps=6 format=3 uid="uid://75e4pjjygybg"]
 
+[ext_resource type="Theme" uid="uid://ctns4fvpvo0gj" path="res://scripts/ui_theme.tres" id="1_22d0k"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_cg51m"]
 [ext_resource type="Texture2D" uid="uid://evmb2bn5tut4" path="res://assets/sprites/menu_frame.png" id="1_y4gav"]
 [ext_resource type="Texture2D" uid="uid://cw6sjov2nii38" path="res://assets/sprites/logo.png" id="2_6t7kt"]
-[ext_resource type="FontFile" uid="uid://dipkhtx5t332r" path="res://assets/fonts/Gorditas-Regular.ttf" id="3_gxeml"]
+[ext_resource type="Texture2D" uid="uid://c66j566toee5m" path="res://assets/sprites/blurred assets/menu_background2.jpg" id="3_swiye"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7irf5"]
-bg_color = Color(0.909897, 0.454505, 0.158511, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[node name="main_menu" type="Node"]
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_22d0k")
 script = ExtResource("1_cg51m")
 
-[node name="Frame" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_swiye")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -283.0
+offset_right = 278.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Frame" type="TextureRect" parent="Panel"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -470.0
-offset_top = -416.0
+offset_top = -423.0
 offset_right = 447.0
-offset_bottom = 454.0
+offset_bottom = 447.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_y4gav")
 
-[node name="Logo" type="TextureRect" parent="."]
+[node name="Logo" type="TextureRect" parent="Panel"]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -240.0
-offset_top = 21.0
+offset_top = -218.0
 offset_right = 240.0
-offset_bottom = 427.0
+offset_bottom = 188.0
 grow_horizontal = 2
 texture = ExtResource("2_6t7kt")
 expand_mode = 1
 
-[node name="StartButton" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="Panel"]
+layout_mode = 2
+offset_left = 93.0
+offset_top = 200.0
+offset_right = 463.0
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-19, 39)
+theme = ExtResource("1_22d0k")
+text = "Start Game"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -205.0
-offset_top = -73.5
-offset_right = 205.0
-offset_bottom = 73.5
+offset_left = -150.0
+offset_top = -53.0
+offset_right = 150.0
+offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_gxeml")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_7irf5")
-text = "Start Game"
+pivot_offset = Vector2(158, 107)
+theme_override_constants/separation = 10
+alignment = 1
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[node name="OptionsButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_22d0k")
+text = "Options
+"
+
+[node name="ExitButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="Panel/StartButton" to="." method="_on_start_button_pressed"]
