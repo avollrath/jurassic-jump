@@ -1,7 +1,6 @@
 extends Area2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @export var jump_boost_velocity: float = -2000.0
-@onready var bounce_sound: AudioStreamPlayer2D = $BounceSound
 
 func _on_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:

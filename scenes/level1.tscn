@@ -1,6 +1,5 @@
-[gd_scene load_steps=24 format=3 uid="uid://dbg6pn3l745r8"]
+[gd_scene load_steps=26 format=3 uid="uid://dbg6pn3l745r8"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_1w478"]
 [ext_resource type="PackedScene" uid="uid://y8jax64gdbgg" path="res://scenes/player.tscn" id="1_6gi5y"]
 [ext_resource type="Texture2D" uid="uid://cjst0l3ytij0" path="res://assets/sprites/background1.jpg" id="2_wkxea"]
 [ext_resource type="PackedScene" uid="uid://cer4nbmqxs8e0" path="res://scenes/cloud.tscn" id="3_gyoxx"]
@@ -8,18 +7,19 @@
 [ext_resource type="Texture2D" uid="uid://bs1ksqgkee5e4" path="res://assets/sprites/tree.png" id="3_tdi0r"]
 [ext_resource type="Texture2D" uid="uid://pgwvw0yljs5u" path="res://assets/sprites/pillar.png" id="4_7aud8"]
 [ext_resource type="Texture2D" uid="uid://d04brwg3466qo" path="res://assets/sprites/foreground1_blur.png" id="4_80g5c"]
-[ext_resource type="Texture2D" uid="uid://dtw03u0fhqyty" path="res://assets/sprites/foreground1.png" id="4_kiwoy"]
 [ext_resource type="PackedScene" uid="uid://dmdftj6ddc66i" path="res://scenes/platform.tscn" id="5_ft028"]
 [ext_resource type="PackedScene" uid="uid://do00t2ki36mvf" path="res://scenes/coin.tscn" id="6_l1upn"]
+[ext_resource type="Texture2D" uid="uid://ch6ldm3tvru8n" path="res://assets/sprites/foreground/fern.png" id="6_qbmp6"]
 [ext_resource type="PackedScene" uid="uid://b3kiul8e7ijxt" path="res://scenes/killzone.tscn" id="7_2a2wm"]
 [ext_resource type="PackedScene" uid="uid://c7d7bq3wwuvad" path="res://scenes/high_platform.tscn" id="8_d5ebl"]
 [ext_resource type="PackedScene" uid="uid://cftnj4ygn37ep" path="res://scenes/enemy.tscn" id="9_jkw21"]
 [ext_resource type="PackedScene" uid="uid://dln7ow5k54uah" path="res://scenes/finish.tscn" id="11_npr13"]
 [ext_resource type="PackedScene" uid="uid://0hdyud3pqhlu" path="res://scenes/mushroom.tscn" id="11_vb61r"]
 [ext_resource type="PackedScene" uid="uid://bolb5lmyjtskm" path="res://scenes/level2.tscn" id="12_shv5m"]
+[ext_resource type="AudioStream" uid="uid://byntc27wv4rkc" path="res://assets/sounds/snail.mp3" id="13_8asan"]
 [ext_resource type="AudioStream" uid="uid://djco8yw50comu" path="res://assets/music/backgroundMusic2.mp3" id="13_31rhy"]
-[ext_resource type="FontFile" uid="uid://do88ooyecefwl" path="res://assets/fonts/Gorditas-Bold.ttf" id="13_fwbl2"]
-[ext_resource type="Texture2D" uid="uid://cr2xjbppxfthf" path="res://assets/sprites/life.png" id="15_p02fj"]
+
+[sub_resource type="GDScript" id="GDScript_y3cvm"]
 
 [sub_resource type="Shader" id="Shader_25mik"]
 code = "shader_type canvas_item;
@@ -40,13 +40,46 @@ void fragment() {
 shader = SubResource("Shader_25mik")
 shader_parameter/blur_amount = Vector2(0.01, 0.01)
 
+[sub_resource type="Animation" id="Animation_xjjj2"]
+resource_name = "sway"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.261799, -0.25, 0, 0.25, 0, 0.261799, -0.25, 0, 0.25, 0, -0.261799, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10, 20)
+}
+
+[sub_resource type="Animation" id="Animation_k4opp"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.390954, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ei7cw"]
+_data = {
+"RESET": SubResource("Animation_k4opp"),
+"sway": SubResource("Animation_xjjj2")
+}
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3imwi"]
 
-[node name="Game" type="Node2D"]
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_1w478")
+[node name="Level1" type="Node2D"]
+script = SubResource("GDScript_y3cvm")
 
 [node name="Level" type="Node" parent="."]
 
@@ -88,13 +121,68 @@ scale = Vector2(1.53784, -1.53784)
 texture = ExtResource("4_80g5c")
 flip_v = true
 
-[node name="Sprite2D3" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
-modulate = Color(0.356263, 0.196213, 0.14258, 1)
+[node name="Sprite2D2" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
 z_index = 1
-position = Vector2(7616, 992)
+position = Vector2(7712, 992)
 scale = Vector2(1.53784, -1.53784)
-texture = ExtResource("4_kiwoy")
+texture = ExtResource("4_80g5c")
 flip_v = true
+
+[node name="ParallaxLayer 2" type="ParallaxLayer" parent="Level/ParallaxForeground"]
+z_index = 10
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(5024, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("6_qbmp6")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(3136, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("6_qbmp6")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Sprite2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Sprite2D3" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(1280, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("6_qbmp6")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Sprite2D3"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
 
 [node name="Clouds" type="Node" parent="Level"]
 
@@ -174,11 +262,13 @@ position = Vector2(5696, 800)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(4576, 928)
+enemy_sound_file = ExtResource("13_8asan")
 SPEED = 10
 
 [node name="Snail2" parent="Level/Enemies" instance=ExtResource("9_jkw21")]
 z_index = 1
 position = Vector2(960, 928)
+enemy_sound_file = ExtResource("13_8asan")
 SPEED = 50
 
 [node name="Mushrooms" type="Node" parent="Level"]
@@ -200,57 +290,12 @@ position = Vector2(7104, 928)
 target_level = ExtResource("12_shv5m")
 target_level_music = ExtResource("13_31rhy")
 
+[node name="SpawnPoint" type="Marker2D" parent="Level"]
+position = Vector2(192, 512)
+
 [node name="Killzone" parent="." instance=ExtResource("7_2a2wm")]
 position = Vector2(480, 1152)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(-2, 0)
 shape = SubResource("WorldBoundaryShape2D_3imwi")
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Panel" type="Panel" parent="UI"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -448.0
-offset_top = 32.0
-offset_right = -32.0
-offset_bottom = 128.0
-grow_horizontal = 0
-
-[node name="ScoreLabel" type="Label" parent="UI/Panel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("13_fwbl2")
-theme_override_font_sizes/font_size = 50
-text = "Score 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Lives" type="HBoxContainer" parent="UI"]
-offset_left = 1568.0
-offset_top = 160.0
-offset_right = 1792.0
-offset_bottom = 224.0
-alignment = 2
-
-[node name="Life" type="TextureRect" parent="UI/Lives"]
-layout_mode = 2
-texture = ExtResource("15_p02fj")
-expand_mode = 2
-
-[node name="Life2" type="TextureRect" parent="UI/Lives"]
-layout_mode = 2
-texture = ExtResource("15_p02fj")
-expand_mode = 2
-
-[node name="Life3" type="TextureRect" parent="UI/Lives"]
-layout_mode = 2
-texture = ExtResource("15_p02fj")
-expand_mode = 2

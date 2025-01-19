@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://y8jax64gdbgg"]
+[gd_scene load_steps=16 format=3 uid="uid://y8jax64gdbgg"]
 
 [ext_resource type="Texture2D" uid="uid://54m7ttauwmoo" path="res://assets/sprites/char_sprite.png" id="1_4ltex"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_k5b5s"]
@@ -71,6 +71,33 @@ animations = [{
 radius = 73.0
 height = 202.0
 
+[sub_resource type="Curve" id="Curve_fgf3k"]
+_data = [Vector2(0, 1), 0.0, 0.0226586, 0, 0, Vector2(1, 0), -0.616748, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_oq0d6"]
+curve = SubResource("Curve_fgf3k")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kf87v"]
+lifetime_randomness = 0.1
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(100, 1, 1)
+direction = Vector3(0, 1, 0)
+spread = 110.0
+initial_velocity_min = 751.48
+initial_velocity_max = 863.43
+gravity = Vector3(0, 100, 0)
+scale_min = 2.0
+scale_max = 7.0
+color = Color(0.748967, 2.88785e-07, 0.393112, 1)
+alpha_curve = SubResource("CurveTexture_oq0d6")
+hue_variation_min = -2.23517e-08
+hue_variation_max = 0.05
+turbulence_noise_strength = 2.55
+turbulence_influence_min = 0.189
+turbulence_influence_max = 0.189
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_k5b5s")
@@ -95,3 +122,22 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 drag_top_margin = 0.5
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[node name="FlickerTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 400
+process_material = SubResource("ParticleProcessMaterial_kf87v")
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.4
+randomness = 0.4
+fixed_fps = 60
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

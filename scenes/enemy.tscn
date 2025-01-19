@@ -72,4 +72,7 @@ position = Vector2(20, -96)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_pk400")
 
+[node name="EnemySound" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

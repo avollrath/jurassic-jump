@@ -8,3 +8,4 @@ extends Node
 @onready var jump_sound: AudioStreamPlayer = $SFX/JumpSound
 @onready var win_sound: AudioStreamPlayer = $SFX/WinSound
 @onready var die_sound: AudioStreamPlayer = $SFX/DieSound
+@onready var damage_sound: AudioStreamPlayer = $SFX/DamageSound
