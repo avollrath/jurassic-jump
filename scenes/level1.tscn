@@ -95,10 +95,16 @@ metadata/_edit_lock_ = true
 motion_scale = Vector2(0.2, 0.2)
 
 [node name="Cloud" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("3_gyoxx")]
-position = Vector2(960, 320)
+position = Vector2(768, 256)
 
 [node name="Cloud2" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("3_gyoxx")]
 position = Vector2(2624, 320)
+
+[node name="Cloud8" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("3_gyoxx")]
+position = Vector2(1984, 160)
+
+[node name="Cloud9" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("3_gyoxx")]
+position = Vector2(3392, 192)
 
 [node name="Cloud3" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("3_gyoxx")]
 position = Vector2(4544, 256)
@@ -212,20 +218,6 @@ libraries = {
 autoplay = "sway"
 playback_auto_capture_transition_type = 5
 
-[node name="Grounds" type="Node" parent="Level"]
-
-[node name="Ground" parent="Level/Grounds" instance=ExtResource("3_qdm1x")]
-position = Vector2(611, 1095)
-
-[node name="Ground2" parent="Level/Grounds" instance=ExtResource("3_qdm1x")]
-position = Vector2(2080, 1095)
-
-[node name="Ground3" parent="Level/Grounds" instance=ExtResource("3_qdm1x")]
-position = Vector2(4288, 1095)
-
-[node name="Ground4" parent="Level/Grounds" instance=ExtResource("3_qdm1x")]
-position = Vector2(7072, 1095)
-
 [node name="Platforms" type="Node" parent="Level"]
 
 [node name="Platform" parent="Level/Platforms" instance=ExtResource("5_ft028")]
@@ -239,6 +231,20 @@ position = Vector2(4992, 736)
 
 [node name="HighPlatform" parent="Level/Platforms" instance=ExtResource("8_d5ebl")]
 position = Vector2(5696, 800)
+
+[node name="Grounds" type="Node" parent="Level"]
+
+[node name="Ground" parent="Level/Grounds" instance=ExtResource("3_qdm1x")]
+position = Vector2(611, 1095)
+
+[node name="Ground2" parent="Level/Grounds" instance=ExtResource("3_qdm1x")]
+position = Vector2(2080, 1095)
+
+[node name="Ground3" parent="Level/Grounds" instance=ExtResource("3_qdm1x")]
+position = Vector2(4288, 1095)
+
+[node name="Ground4" parent="Level/Grounds" instance=ExtResource("3_qdm1x")]
+position = Vector2(7072, 1095)
 
 [node name="Enemies" type="Node" parent="Level"]
 

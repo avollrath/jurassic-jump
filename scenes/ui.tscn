@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c66e5rcra61ww"]
+[gd_scene load_steps=4 format=3 uid="uid://c66e5rcra61ww"]
 
 [ext_resource type="FontFile" uid="uid://do88ooyecefwl" path="res://assets/fonts/Gorditas-Bold.ttf" id="1_wuae6"]
 [ext_resource type="Texture2D" uid="uid://cr2xjbppxfthf" path="res://assets/sprites/life.png" id="2_g47sk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8tjf"]
+bg_color = Color(0, 0, 0, 0.113725)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="UI" type="CanvasLayer"]
 
@@ -14,6 +21,7 @@ offset_top = 32.0
 offset_right = -32.0
 offset_bottom = 128.0
 grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s8tjf")
 
 [node name="ScoreLabel" type="Label" parent="Panel"]
 unique_name_in_owner = true

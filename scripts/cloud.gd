@@ -1,8 +1,8 @@
 extends Sprite2D
 
-@export var speed: float = 50.0  # Speed at which the sprite moves to the left
-@export var sway_amplitude: float = 10.0  # Amplitude of the swaying motion
-@export var sway_frequency: float = 1.0  # Frequency of the swaying motion
+@export var speed: float = 10.0  # Speed at which the sprite moves to the left
+@export var sway_amplitude: float = 5  # Amplitude of the swaying motion
+@export var sway_frequency: float = 0.5  # Frequency of the swaying motion
 
 var time_passed: float = 0.0  # Tracks time for the sine wave
 var random_offset: float = 0.0  # Random offset for the swaying motion

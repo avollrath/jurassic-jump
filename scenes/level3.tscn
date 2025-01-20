@@ -81,7 +81,7 @@ _data = {
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3imwi"]
 
-[node name="Level2" type="Node2D"]
+[node name="Level3" type="Node2D"]
 script = SubResource("GDScript_y3cvm")
 
 [node name="Level" type="Node" parent="."]

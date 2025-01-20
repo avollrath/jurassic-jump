@@ -103,7 +103,8 @@ randomness = 0.5
 [node name="BounceParticles2" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_jg30l")
 position = Vector2(-1, -118)
-amount = 20
+amount = 200
+amount_ratio = 0.1
 process_material = SubResource("ParticleProcessMaterial_dhjhj")
 texture = ExtResource("4_at4d1")
 lifetime = 3.0

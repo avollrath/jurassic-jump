@@ -121,9 +121,10 @@ position = Vector2(9408, 256)
 motion_scale = Vector2(0.3, 0.3)
 
 [node name="Skeleton" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
-position = Vector2(2279.78, 640.464)
+position = Vector2(647, 640.464)
 scale = Vector2(1.35386, 1.35386)
 texture = ExtResource("3_ho68k")
+flip_h = true
 
 [node name="Tree" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
 position = Vector2(8100, 608)

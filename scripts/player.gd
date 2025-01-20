@@ -38,7 +38,6 @@ func _physics_process(delta: float) -> void:
 	# 4) Now `is_on_floor()` is up-to-date
 	var on_floor_now = is_on_floor()
 	if was_in_air and on_floor_now:
-		print("Just landed")
 		just_landed = true
 		wheels_particles.emitting = true
 		AudioManager.land_sound.play()
