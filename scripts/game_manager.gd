@@ -4,9 +4,14 @@ var score = 0
 var lives = 3
 var hearts: Array[TextureRect] = [] 
 var label : Label
+var highscore_label : Label
+var game_over : Control
 
 func set_score_label(new_label : Label):
 	label = new_label
+	
+func set_highscore_label(new_label : Label):
+	highscore_label = new_label
 	
 func set_hearts(new_hearts: Array[TextureRect]) -> void:
 	hearts = new_hearts
@@ -29,4 +34,7 @@ func decrease_health():
 		label.text = "Score: " + str(score)
 		for heart in hearts:
 			heart.visible = true
-		get_tree().reload_current_scene()
+		AudioManager.background_music.stop()
+		AudioManager.game_over_music.play()
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn") # Gets the loaded scene, which is packed, so it'll have to be manually instantiated
+		highscore_label.text = "High Score: " + str(score)
