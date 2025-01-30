@@ -18,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://vb2jkglo56t2" path="res://assets/sounds/spikey.mp3" id="16_sy1ao"]
 [ext_resource type="PackedScene" uid="uid://0hdyud3pqhlu" path="res://scenes/mushroom.tscn" id="17_52l8e"]
 [ext_resource type="PackedScene" uid="uid://dln7ow5k54uah" path="res://scenes/finish.tscn" id="18_w8mqv"]
-[ext_resource type="PackedScene" uid="uid://75e4pjjygybg" path="res://scenes/main_menu.tscn" id="19_uqrrn"]
+[ext_resource type="PackedScene" uid="uid://b4yf8ehcup6hv" path="res://scenes/main.tscn" id="19_tvf83"]
 [ext_resource type="AudioStream" uid="uid://cr5jd7qi3h4py" path="res://assets/music/backgroundMusic1.mp3" id="20_rmkep"]
 [ext_resource type="PackedScene" uid="uid://b3kiul8e7ijxt" path="res://scenes/killzone.tscn" id="21_bro8c"]
 
@@ -117,16 +117,173 @@ position = Vector2(8384, 320)
 [node name="Cloud7" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
 position = Vector2(9408, 256)
 
+[node name="Cloud8" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(11529, 214.5)
+
+[node name="Cloud9" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(13016, 169.5)
+
+[node name="Cloud10" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(14803, 206.5)
+
+[node name="Cloud11" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(15507, 270.5)
+
+[node name="Cloud12" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(16627, 270.5)
+
+[node name="Cloud13" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(18643, 270.5)
+
+[node name="Cloud14" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(19667, 206.5)
+
+[node name="Cloud15" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(21393, 196.5)
+
+[node name="Cloud16" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(22880, 151.5)
+
+[node name="Cloud17" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(24667, 188.5)
+
+[node name="Cloud18" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(25371, 252.5)
+
+[node name="Cloud19" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(26491, 252.5)
+
+[node name="Cloud20" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(28507, 252.5)
+
+[node name="Cloud21" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(29531, 188.5)
+
+[node name="Cloud22" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(31473, 218.5)
+
+[node name="Cloud23" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(32960, 173.5)
+
+[node name="Cloud24" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(34747, 210.5)
+
+[node name="Cloud25" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(35451, 274.5)
+
+[node name="Cloud26" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(36571, 274.5)
+
+[node name="Cloud27" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(38587, 274.5)
+
+[node name="Cloud28" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(39611, 210.5)
+
+[node name="Cloud29" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(42150, 214.5)
+
+[node name="Cloud30" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(43637, 169.5)
+
+[node name="Cloud31" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(45424, 206.5)
+
+[node name="Cloud32" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(46128, 270.5)
+
+[node name="Cloud33" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(47248, 270.5)
+
+[node name="Cloud34" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(49264, 270.5)
+
+[node name="Cloud35" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(50288, 206.5)
+
+[node name="Cloud36" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(51646, 160.5)
+
+[node name="Cloud37" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(53133, 115.5)
+
+[node name="Cloud38" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(54920, 152.5)
+
+[node name="Cloud39" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(55624, 216.5)
+
+[node name="Cloud40" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(56744, 216.5)
+
+[node name="Cloud41" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(58760, 216.5)
+
+[node name="Cloud42" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(59784, 152.5)
+
+[node name="Cloud43" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(60769, 196.5)
+
+[node name="Cloud44" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(62256, 151.5)
+
+[node name="Cloud45" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(64043, 188.5)
+
+[node name="Cloud46" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(64747, 252.5)
+
+[node name="Cloud47" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(65867, 252.5)
+
+[node name="Cloud48" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(67883, 252.5)
+
+[node name="Cloud49" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(68907, 188.5)
+
+[node name="Cloud50" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(70418, 205.5)
+
+[node name="Cloud51" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(71905, 160.5)
+
+[node name="Cloud52" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(73692, 197.5)
+
+[node name="Cloud53" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(74396, 261.5)
+
+[node name="Cloud54" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(75516, 261.5)
+
+[node name="Cloud55" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(77532, 261.5)
+
+[node name="Cloud56" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("2_ysqn2")]
+position = Vector2(78556, 197.5)
+
 [node name="ParallaxLayer -3" type="ParallaxLayer" parent="Level/ParallaxBackground"]
 motion_scale = Vector2(0.3, 0.3)
 
 [node name="Skeleton" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
-position = Vector2(2743, 656)
+position = Vector2(10841, 656)
+scale = Vector2(1.35386, 1.35386)
+texture = ExtResource("3_gfld6")
+
+[node name="Skeleton2" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
+position = Vector2(42904, 656)
 scale = Vector2(1.35386, 1.35386)
 texture = ExtResource("3_gfld6")
 
 [node name="Tree" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
-position = Vector2(8100, 608)
+position = Vector2(14020, 608)
+scale = Vector2(1.42308, 1.42308)
+texture = ExtResource("4_jep5c")
+
+[node name="Tree2" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -3"]
+position = Vector2(31071, 608)
 scale = Vector2(1.42308, 1.42308)
 texture = ExtResource("4_jep5c")
 
@@ -134,11 +291,11 @@ texture = ExtResource("4_jep5c")
 motion_scale = Vector2(0.5, 0.5)
 
 [node name="Pillar" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -2"]
-position = Vector2(5845, 608)
+position = Vector2(24789, 699)
 texture = ExtResource("5_8cqpo")
 
 [node name="Pillar2" type="Sprite2D" parent="Level/ParallaxBackground/ParallaxLayer -2"]
-position = Vector2(3968, 704)
+position = Vector2(6735, 704)
 texture = ExtResource("5_8cqpo")
 
 [node name="ParallaxForeground" type="ParallaxBackground" parent="Level"]
@@ -168,6 +325,78 @@ flip_v = true
 modulate = Color(0.560955, 0.560955, 0.560955, 1)
 z_index = 1
 position = Vector2(12752, 992)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground4" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(17883, 991.25)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground5" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(23067, 991.25)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground6" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(28171, 991.25)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground7" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(33335, 1003)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground8" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(38519, 1003)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground9" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(43623, 1003)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground10" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(48754.1, 1002.25)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground11" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(53938.1, 1002.25)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_j2bp3")
+flip_v = true
+
+[node name="Foreground12" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(59042.1, 1002.25)
 scale = Vector2(1.53784, -1.53784)
 texture = ExtResource("6_j2bp3")
 flip_v = true
@@ -312,6 +541,686 @@ libraries = {
 autoplay = "sway"
 playback_auto_capture_transition_type = 5
 
+[node name="Fern9" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(19678.7, 1211.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern9"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern10" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(17591.7, 1271.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern10"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern11" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(23581.3, 1211.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern11"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern12" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(21693.3, 1211.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern12"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern13" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(26963.3, 1211.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern13"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern14" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(25075.3, 1211.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern14"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern15" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(28729.7, 1211.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern15"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern16" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(16345.7, 1313.65)
+rotation = -0.390954
+scale = Vector2(1.55135, -1.55135)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern16"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern17" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(34818.7, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern17"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern18" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(32731.7, 1442.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern18"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern19" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(38721.3, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern19"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern20" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(36833.3, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern20"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern21" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(42103.3, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern21"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern22" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(40215.3, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern22"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern23" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(43869.7, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern23"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern24" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(31485.7, 1484.65)
+rotation = -0.390954
+scale = Vector2(1.55135, -1.55135)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern24"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern25" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(49248.7, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern25"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern26" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(47161.7, 1433.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern26"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern27" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(53151.3, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern27"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern28" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(51263.3, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern28"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern29" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(56533.3, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern29"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern30" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(54645.3, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern30"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern31" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(58299.7, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern31"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern32" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(45915.7, 1475.65)
+rotation = -0.390954
+scale = Vector2(1.55135, -1.55135)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern32"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern33" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(63905.7, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern33"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern34" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(61818.7, 1442.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern34"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern35" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(67808.3, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern35"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern36" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(65920.3, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern36"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern37" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(71190.3, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern37"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern38" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(69302.3, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern38"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern39" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(72956.7, 1382.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern39"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern40" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(60572.7, 1484.65)
+rotation = -0.390954
+scale = Vector2(1.55135, -1.55135)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern40"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern41" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(78335.7, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern41"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern42" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(76248.7, 1433.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern42"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern43" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(82238.3, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern43"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern44" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(80350.3, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern44"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern45" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(85620.3, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern45"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern46" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(83732.3, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern46"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern47" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(87386.7, 1373.65)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern47"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern48" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(75002.7, 1475.65)
+rotation = -0.390954
+scale = Vector2(1.55135, -1.55135)
+texture = ExtResource("7_4oaxe")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern48"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
 [node name="Player" parent="Level" instance=ExtResource("8_ar3x7")]
 z_index = 5
 position = Vector2(349, 422)
@@ -321,149 +1230,1292 @@ DECELERATION = 500.0
 
 [node name="Coins" type="Node" parent="Level"]
 
-[node name="Coin" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(1461, 387)
-
-[node name="Coin2" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(1557, 387)
-
-[node name="Coin3" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(1653, 387)
-
 [node name="Coin4" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2229, 590)
+position = Vector2(1810, 472)
 
 [node name="Coin5" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2325, 590)
+position = Vector2(1906, 472)
 
 [node name="Coin6" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2421, 590)
+position = Vector2(2002, 472)
 
 [node name="Coin7" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2229, 476)
+position = Vector2(1810, 358)
 
 [node name="Coin8" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2325, 476)
+position = Vector2(1906, 358)
 
 [node name="Coin9" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2421, 476)
+position = Vector2(2002, 358)
 
 [node name="Coin10" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2229, 362)
+position = Vector2(1810, 244)
 
 [node name="Coin11" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2325, 362)
+position = Vector2(1906, 244)
 
 [node name="Coin12" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(2421, 362)
+position = Vector2(2002, 244)
 
 [node name="Coin13" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(4178, 171)
+position = Vector2(2628, 472)
 
 [node name="Coin14" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(4274, 171)
+position = Vector2(2724, 472)
 
 [node name="Coin15" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(4370, 171)
+position = Vector2(2820, 472)
 
 [node name="Coin16" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(4178, 57)
+position = Vector2(2628, 358)
 
 [node name="Coin17" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(4274, 57)
+position = Vector2(2724, 358)
 
 [node name="Coin18" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(4370, 57)
+position = Vector2(2820, 358)
+
+[node name="Coin61" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(2628, 244)
+
+[node name="Coin62" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(2724, 244)
+
+[node name="Coin63" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(2820, 244)
+
+[node name="Coin64" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3440, 472)
+
+[node name="Coin65" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3536, 472)
+
+[node name="Coin66" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3632, 472)
+
+[node name="Coin67" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3440, 358)
+
+[node name="Coin68" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3536, 358)
+
+[node name="Coin69" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3632, 358)
+
+[node name="Coin70" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3440, 244)
+
+[node name="Coin71" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3536, 244)
+
+[node name="Coin72" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(3632, 244)
+
+[node name="Coin73" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4298, 472)
+
+[node name="Coin74" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4394, 472)
+
+[node name="Coin75" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4490, 472)
+
+[node name="Coin76" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4298, 358)
+
+[node name="Coin77" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4394, 358)
+
+[node name="Coin78" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4490, 358)
+
+[node name="Coin79" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4298, 244)
+
+[node name="Coin80" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4394, 244)
+
+[node name="Coin81" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(4490, 244)
+
+[node name="Coin82" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5187, 472)
+
+[node name="Coin83" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5283, 472)
+
+[node name="Coin84" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5379, 472)
+
+[node name="Coin85" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5187, 358)
+
+[node name="Coin86" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5283, 358)
+
+[node name="Coin87" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5379, 358)
+
+[node name="Coin88" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5187, 244)
+
+[node name="Coin89" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5283, 244)
+
+[node name="Coin90" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(5379, 244)
+
+[node name="Coin91" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6050, 472)
+
+[node name="Coin92" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6146, 472)
+
+[node name="Coin93" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6242, 472)
+
+[node name="Coin94" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6050, 358)
+
+[node name="Coin95" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6146, 358)
+
+[node name="Coin96" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6242, 358)
+
+[node name="Coin97" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6050, 244)
+
+[node name="Coin98" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6146, 244)
+
+[node name="Coin99" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6242, 244)
+
+[node name="Coin100" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6899, 472)
+
+[node name="Coin101" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6995, 472)
+
+[node name="Coin102" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(7091, 472)
+
+[node name="Coin103" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6899, 358)
+
+[node name="Coin104" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6995, 358)
+
+[node name="Coin105" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(7091, 358)
+
+[node name="Coin106" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6899, 244)
+
+[node name="Coin107" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(6995, 244)
+
+[node name="Coin108" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(7091, 244)
+
+[node name="Coin109" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9309, 472)
+
+[node name="Coin110" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9405, 472)
+
+[node name="Coin111" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9501, 472)
+
+[node name="Coin112" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9309, 358)
+
+[node name="Coin113" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9405, 358)
+
+[node name="Coin114" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9501, 358)
+
+[node name="Coin115" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9309, 244)
+
+[node name="Coin116" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9405, 244)
+
+[node name="Coin117" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(9501, 244)
+
+[node name="Coin118" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10127, 472)
+
+[node name="Coin119" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10223, 472)
+
+[node name="Coin120" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10319, 472)
+
+[node name="Coin121" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10127, 358)
+
+[node name="Coin122" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10223, 358)
+
+[node name="Coin123" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10319, 358)
+
+[node name="Coin124" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10127, 244)
+
+[node name="Coin125" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10223, 244)
+
+[node name="Coin126" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10319, 244)
+
+[node name="Coin127" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10939, 472)
+
+[node name="Coin128" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11035, 472)
+
+[node name="Coin129" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11131, 472)
+
+[node name="Coin130" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10939, 358)
+
+[node name="Coin131" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11035, 358)
+
+[node name="Coin132" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11131, 358)
+
+[node name="Coin133" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(10939, 244)
+
+[node name="Coin134" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11035, 244)
+
+[node name="Coin135" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11131, 244)
+
+[node name="Coin136" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11797, 472)
+
+[node name="Coin137" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11893, 472)
+
+[node name="Coin138" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11989, 472)
+
+[node name="Coin139" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11797, 358)
+
+[node name="Coin140" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11893, 358)
+
+[node name="Coin141" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11989, 358)
+
+[node name="Coin142" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11797, 244)
+
+[node name="Coin143" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11893, 244)
+
+[node name="Coin144" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(11989, 244)
+
+[node name="Coin145" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12686, 472)
+
+[node name="Coin146" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12782, 472)
+
+[node name="Coin147" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12878, 472)
+
+[node name="Coin148" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12686, 358)
+
+[node name="Coin149" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12782, 358)
+
+[node name="Coin150" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12878, 358)
+
+[node name="Coin151" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12686, 244)
+
+[node name="Coin152" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12782, 244)
+
+[node name="Coin153" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(12878, 244)
+
+[node name="Coin154" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13549, 472)
+
+[node name="Coin155" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13645, 472)
+
+[node name="Coin156" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13741, 472)
+
+[node name="Coin157" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13549, 358)
+
+[node name="Coin158" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13645, 358)
+
+[node name="Coin159" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13741, 358)
+
+[node name="Coin160" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13549, 244)
+
+[node name="Coin161" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13645, 244)
+
+[node name="Coin162" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(13741, 244)
+
+[node name="Coin235" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16041, 364)
+
+[node name="Coin236" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16137, 364)
+
+[node name="Coin237" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16233, 364)
+
+[node name="Coin238" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16041, 250)
+
+[node name="Coin239" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16137, 250)
+
+[node name="Coin240" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16233, 250)
+
+[node name="Coin241" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16041, 136)
+
+[node name="Coin242" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16137, 136)
+
+[node name="Coin243" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(16233, 136)
+
+[node name="Coin244" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17293, 787)
+
+[node name="Coin245" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17389, 787)
+
+[node name="Coin246" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17485, 787)
+
+[node name="Coin247" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17293, 673)
+
+[node name="Coin248" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17389, 673)
+
+[node name="Coin249" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17485, 673)
+
+[node name="Coin250" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17293, 559)
+
+[node name="Coin251" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17389, 559)
+
+[node name="Coin252" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(17485, 559)
+
+[node name="Coin253" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18019, 780)
+
+[node name="Coin254" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18115, 780)
+
+[node name="Coin255" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18211, 780)
+
+[node name="Coin256" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18019, 666)
+
+[node name="Coin257" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18115, 666)
+
+[node name="Coin258" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18211, 666)
+
+[node name="Coin259" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18019, 552)
+
+[node name="Coin260" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18115, 552)
+
+[node name="Coin261" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(18211, 552)
+
+[node name="Coin262" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19536, 692)
+
+[node name="Coin263" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19632, 692)
+
+[node name="Coin264" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19728, 692)
+
+[node name="Coin265" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19536, 578)
+
+[node name="Coin266" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19632, 578)
+
+[node name="Coin267" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19728, 578)
+
+[node name="Coin268" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19536, 464)
+
+[node name="Coin269" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19632, 464)
+
+[node name="Coin270" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(19728, 464)
+
+[node name="Coin271" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21121, 730)
+
+[node name="Coin272" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21217, 730)
+
+[node name="Coin273" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21313, 730)
+
+[node name="Coin274" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21121, 616)
+
+[node name="Coin275" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21217, 616)
+
+[node name="Coin276" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21313, 616)
+
+[node name="Coin277" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21121, 502)
+
+[node name="Coin278" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21217, 502)
+
+[node name="Coin279" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(21313, 502)
+
+[node name="Coin280" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23006, 516)
+
+[node name="Coin281" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23102, 516)
+
+[node name="Coin282" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23198, 516)
+
+[node name="Coin283" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23006, 402)
+
+[node name="Coin284" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23102, 402)
+
+[node name="Coin285" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23198, 402)
+
+[node name="Coin286" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23006, 288)
+
+[node name="Coin287" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23102, 288)
+
+[node name="Coin288" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23198, 288)
+
+[node name="Coin289" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23701, 294)
+
+[node name="Coin290" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23797, 294)
+
+[node name="Coin291" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23893, 294)
+
+[node name="Coin292" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23701, 180)
+
+[node name="Coin293" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23797, 180)
+
+[node name="Coin294" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23893, 180)
+
+[node name="Coin295" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23701, 66)
+
+[node name="Coin296" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23797, 66)
+
+[node name="Coin297" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(23893, 66)
+
+[node name="Coin298" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26067, 748)
+
+[node name="Coin299" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26163, 748)
+
+[node name="Coin300" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26259, 748)
+
+[node name="Coin301" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26067, 634)
+
+[node name="Coin302" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26163, 634)
+
+[node name="Coin303" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26259, 634)
+
+[node name="Coin304" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26067, 520)
+
+[node name="Coin305" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26163, 520)
+
+[node name="Coin306" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(26259, 520)
+
+[node name="Coin307" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27473, 415)
+
+[node name="Coin308" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27569, 415)
+
+[node name="Coin309" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27665, 415)
+
+[node name="Coin310" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27473, 301)
+
+[node name="Coin311" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27569, 301)
+
+[node name="Coin312" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27665, 301)
+
+[node name="Coin313" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27473, 187)
+
+[node name="Coin314" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27569, 187)
+
+[node name="Coin315" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(27665, 187)
+
+[node name="Coin316" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(28937, 405)
+
+[node name="Coin317" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(29033, 405)
+
+[node name="Coin318" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(29129, 405)
+
+[node name="Coin319" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(28937, 291)
+
+[node name="Coin320" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(29033, 291)
+
+[node name="Coin321" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(29129, 291)
+
+[node name="Coin322" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(28937, 177)
+
+[node name="Coin323" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(29033, 177)
+
+[node name="Coin324" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(29129, 177)
+
+[node name="Coin325" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31104, 730)
+
+[node name="Coin326" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31200, 730)
+
+[node name="Coin327" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31296, 730)
+
+[node name="Coin328" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31104, 616)
+
+[node name="Coin329" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31200, 616)
+
+[node name="Coin330" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31296, 616)
+
+[node name="Coin331" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31104, 502)
+
+[node name="Coin332" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31200, 502)
+
+[node name="Coin333" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(31296, 502)
+
+[node name="Coin334" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32392, 589)
+
+[node name="Coin335" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32488, 589)
+
+[node name="Coin336" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32584, 589)
+
+[node name="Coin337" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32392, 475)
+
+[node name="Coin338" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32488, 475)
+
+[node name="Coin339" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32584, 475)
+
+[node name="Coin340" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32392, 361)
+
+[node name="Coin341" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32488, 361)
+
+[node name="Coin342" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(32584, 361)
+
+[node name="Coin343" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(33859, 466)
+
+[node name="Coin344" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(33955, 466)
+
+[node name="Coin345" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(34051, 466)
+
+[node name="Coin346" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(33859, 352)
+
+[node name="Coin347" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(33955, 352)
+
+[node name="Coin348" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(34051, 352)
+
+[node name="Coin349" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(33859, 238)
+
+[node name="Coin350" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(33955, 238)
+
+[node name="Coin351" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(34051, 238)
+
+[node name="Coin352" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35227, 290)
+
+[node name="Coin353" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35323, 290)
+
+[node name="Coin354" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35419, 290)
+
+[node name="Coin355" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35227, 176)
+
+[node name="Coin356" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35323, 176)
+
+[node name="Coin357" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35419, 176)
+
+[node name="Coin358" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35227, 62)
+
+[node name="Coin359" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35323, 62)
+
+[node name="Coin360" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(35419, 62)
+
+[node name="Coin361" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37593, 534)
+
+[node name="Coin362" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37689, 534)
+
+[node name="Coin363" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37785, 534)
+
+[node name="Coin364" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37593, 420)
+
+[node name="Coin365" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37689, 420)
+
+[node name="Coin366" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37785, 420)
+
+[node name="Coin367" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37593, 306)
+
+[node name="Coin368" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37689, 306)
+
+[node name="Coin369" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(37785, 306)
+
+[node name="Coin370" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39173, 605)
+
+[node name="Coin371" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39269, 605)
+
+[node name="Coin372" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39365, 605)
+
+[node name="Coin373" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39173, 491)
+
+[node name="Coin374" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39269, 491)
+
+[node name="Coin375" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39365, 491)
+
+[node name="Coin376" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39173, 377)
+
+[node name="Coin377" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39269, 377)
+
+[node name="Coin378" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39365, 377)
+
+[node name="Coin163" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14398, 472)
+
+[node name="Coin164" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14494, 472)
+
+[node name="Coin165" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14590, 472)
+
+[node name="Coin166" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14398, 358)
+
+[node name="Coin167" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14494, 358)
+
+[node name="Coin168" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14590, 358)
+
+[node name="Coin169" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14398, 244)
+
+[node name="Coin170" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14494, 244)
+
+[node name="Coin171" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(14590, 244)
+
+[node name="Coin172" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39933, 522)
+
+[node name="Coin173" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40029, 522)
+
+[node name="Coin174" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40125, 522)
+
+[node name="Coin175" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39933, 408)
+
+[node name="Coin176" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40029, 408)
+
+[node name="Coin177" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40125, 408)
+
+[node name="Coin178" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(39933, 294)
+
+[node name="Coin179" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40029, 294)
+
+[node name="Coin180" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40125, 294)
+
+[node name="Coin181" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40751, 522)
+
+[node name="Coin182" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40847, 522)
+
+[node name="Coin183" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40943, 522)
+
+[node name="Coin184" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40751, 408)
+
+[node name="Coin185" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40847, 408)
+
+[node name="Coin186" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40943, 408)
+
+[node name="Coin187" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40751, 294)
+
+[node name="Coin188" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40847, 294)
+
+[node name="Coin189" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(40943, 294)
+
+[node name="Coin190" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41563, 522)
+
+[node name="Coin191" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41659, 522)
+
+[node name="Coin192" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41755, 522)
+
+[node name="Coin193" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41563, 408)
+
+[node name="Coin194" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41659, 408)
+
+[node name="Coin195" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41755, 408)
+
+[node name="Coin196" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41563, 294)
+
+[node name="Coin197" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41659, 294)
+
+[node name="Coin198" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(41755, 294)
+
+[node name="Coin199" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42421, 522)
+
+[node name="Coin200" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42517, 522)
+
+[node name="Coin201" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42613, 522)
+
+[node name="Coin202" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42421, 408)
+
+[node name="Coin203" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42517, 408)
+
+[node name="Coin204" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42613, 408)
+
+[node name="Coin205" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42421, 294)
+
+[node name="Coin206" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42517, 294)
+
+[node name="Coin207" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(42613, 294)
+
+[node name="Coin208" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43310, 522)
+
+[node name="Coin209" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43406, 522)
+
+[node name="Coin210" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43502, 522)
+
+[node name="Coin211" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43310, 408)
+
+[node name="Coin212" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43406, 408)
+
+[node name="Coin213" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43502, 408)
+
+[node name="Coin214" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43310, 294)
+
+[node name="Coin215" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43406, 294)
+
+[node name="Coin216" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(43502, 294)
+
+[node name="Coin217" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44173, 522)
+
+[node name="Coin218" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44269, 522)
+
+[node name="Coin219" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44365, 522)
+
+[node name="Coin220" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44173, 408)
+
+[node name="Coin221" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44269, 408)
+
+[node name="Coin222" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44365, 408)
+
+[node name="Coin223" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44173, 294)
+
+[node name="Coin224" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44269, 294)
+
+[node name="Coin225" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(44365, 294)
+
+[node name="Coin226" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45022, 522)
+
+[node name="Coin227" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45118, 522)
+
+[node name="Coin228" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45214, 522)
+
+[node name="Coin229" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45022, 408)
+
+[node name="Coin230" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45118, 408)
+
+[node name="Coin231" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45214, 408)
+
+[node name="Coin232" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45022, 294)
+
+[node name="Coin233" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45118, 294)
+
+[node name="Coin234" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(45214, 294)
 
 [node name="Coin19" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(6518, 562)
+position = Vector2(46683, 562)
 
 [node name="Coin20" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(6614, 562)
+position = Vector2(46779, 562)
 
 [node name="Coin21" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(6710, 562)
+position = Vector2(46875, 562)
 
 [node name="Coin22" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(6518, 448)
+position = Vector2(46683, 448)
 
 [node name="Coin23" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(6614, 448)
+position = Vector2(46779, 448)
 
 [node name="Coin24" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(6710, 448)
+position = Vector2(46875, 448)
 
 [node name="Coin25" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(7377, 308)
+position = Vector2(47755, 308)
 
 [node name="Coin26" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(7473, 308)
+position = Vector2(47851, 308)
 
 [node name="Coin27" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(7569, 308)
+position = Vector2(47947, 308)
 
 [node name="Coin28" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(7377, 194)
+position = Vector2(47755, 194)
 
 [node name="Coin29" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(7473, 194)
+position = Vector2(47851, 194)
 
 [node name="Coin30" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(7569, 194)
+position = Vector2(47947, 194)
+
+[node name="Coin379" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48736, 642)
+
+[node name="Coin380" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48832, 642)
+
+[node name="Coin381" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48928, 642)
+
+[node name="Coin382" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48736, 528)
+
+[node name="Coin383" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48832, 528)
+
+[node name="Coin384" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48928, 528)
+
+[node name="Coin385" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48736, 418)
+
+[node name="Coin386" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48832, 418)
+
+[node name="Coin387" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48928, 418)
+
+[node name="Coin388" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48736, 304)
+
+[node name="Coin389" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48832, 304)
+
+[node name="Coin390" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48928, 304)
+
+[node name="Coin391" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48736, 194)
+
+[node name="Coin392" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48832, 194)
+
+[node name="Coin393" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48928, 194)
+
+[node name="Coin394" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48736, 80)
+
+[node name="Coin395" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48832, 80)
+
+[node name="Coin396" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(48928, 80)
+
+[node name="Coin397" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55221, 899)
+
+[node name="Coin398" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55317, 899)
+
+[node name="Coin399" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55413, 899)
+
+[node name="Coin400" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55221, 785)
+
+[node name="Coin401" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55317, 785)
+
+[node name="Coin402" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55413, 785)
+
+[node name="Coin403" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55221, 675)
+
+[node name="Coin404" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55317, 675)
+
+[node name="Coin405" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55413, 675)
+
+[node name="Coin406" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55221, 561)
+
+[node name="Coin407" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55317, 561)
+
+[node name="Coin408" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55413, 561)
+
+[node name="Coin409" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55221, 451)
+
+[node name="Coin410" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55317, 451)
+
+[node name="Coin411" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55413, 451)
+
+[node name="Coin412" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55221, 337)
+
+[node name="Coin413" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55317, 337)
+
+[node name="Coin414" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55413, 337)
+
+[node name="Coin415" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55876, 888)
+
+[node name="Coin416" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55972, 888)
+
+[node name="Coin417" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(56068, 888)
+
+[node name="Coin418" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55876, 774)
+
+[node name="Coin419" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55972, 774)
+
+[node name="Coin420" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(56068, 774)
+
+[node name="Coin421" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55876, 664)
+
+[node name="Coin422" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55972, 664)
+
+[node name="Coin423" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(56068, 664)
+
+[node name="Coin424" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55876, 550)
+
+[node name="Coin425" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55972, 550)
+
+[node name="Coin426" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(56068, 550)
+
+[node name="Coin427" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55876, 440)
+
+[node name="Coin428" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55972, 440)
+
+[node name="Coin429" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(56068, 440)
+
+[node name="Coin430" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55876, 326)
+
+[node name="Coin431" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(55972, 326)
+
+[node name="Coin432" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(56068, 326)
 
 [node name="Coin31" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(8959, 318)
+position = Vector2(49583, 318)
 
 [node name="Coin32" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(9055, 318)
+position = Vector2(49679, 318)
 
 [node name="Coin33" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(9151, 318)
+position = Vector2(49775, 318)
 
 [node name="Coin34" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(8959, 204)
+position = Vector2(49583, 204)
 
 [node name="Coin35" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(9055, 204)
+position = Vector2(49679, 204)
 
 [node name="Coin36" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(9151, 204)
+position = Vector2(49775, 204)
 
 [node name="Coin37" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(9978, 582)
+position = Vector2(53093, 582)
 
 [node name="Coin38" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(10074, 582)
+position = Vector2(53189, 582)
 
 [node name="Coin39" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(10170, 582)
+position = Vector2(53285, 582)
 
 [node name="Coin40" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(9978, 468)
+position = Vector2(53093, 468)
 
 [node name="Coin41" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(10074, 468)
+position = Vector2(53189, 468)
 
 [node name="Coin42" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(10170, 468)
+position = Vector2(53285, 468)
+
+[node name="Coin49" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54251, 675)
+
+[node name="Coin50" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54347, 675)
+
+[node name="Coin51" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54443, 675)
+
+[node name="Coin52" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54251, 561)
+
+[node name="Coin53" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54347, 561)
+
+[node name="Coin54" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54443, 561)
+
+[node name="Coin55" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54251, 447)
+
+[node name="Coin56" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54347, 447)
+
+[node name="Coin57" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54443, 447)
+
+[node name="Coin58" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54251, 333)
+
+[node name="Coin59" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54347, 333)
+
+[node name="Coin60" parent="Level/Coins" instance=ExtResource("9_uckd5")]
+position = Vector2(54443, 333)
 
 [node name="Coin43" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(11791, 613)
+position = Vector2(51841, 613)
 
 [node name="Coin44" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(11887, 613)
+position = Vector2(51937, 613)
 
 [node name="Coin45" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(11983, 613)
+position = Vector2(52033, 613)
 
 [node name="Coin46" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(11791, 499)
+position = Vector2(51841, 499)
 
 [node name="Coin47" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(11887, 499)
+position = Vector2(51937, 499)
 
 [node name="Coin48" parent="Level/Coins" instance=ExtResource("9_uckd5")]
-position = Vector2(11983, 499)
+position = Vector2(52033, 499)
 
 [node name="Grounds" type="Node" parent="Level"]
 
@@ -471,62 +2523,369 @@ position = Vector2(11983, 499)
 position = Vector2(611, 1095)
 
 [node name="Ground2" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
-position = Vector2(2480, 1095)
+position = Vector2(17368, 1095)
+
+[node name="Ground6" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
+position = Vector2(18860, 1095)
+
+[node name="Ground7" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
+position = Vector2(20432, 1095)
+
+[node name="Ground8" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
+position = Vector2(21999, 1095)
+
+[node name="Ground9" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
+position = Vector2(30451, 1095)
+
+[node name="Ground10" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
+position = Vector2(31973, 1095)
+
+[node name="Ground11" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
+position = Vector2(38895, 1095)
 
 [node name="Ground3" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
-position = Vector2(6104, 1095)
+position = Vector2(46269, 1095)
 
 [node name="Ground4" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
-position = Vector2(13262, 1095)
+position = Vector2(57322, 1095)
 
 [node name="Ground5" parent="Level/Grounds" instance=ExtResource("10_qb6bm")]
-position = Vector2(11326, 1095)
+position = Vector2(51376, 1095)
 
 [node name="Platforms" type="Node" parent="Level"]
 
 [node name="Platform" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
-position = Vector2(2848, 704)
+position = Vector2(1905, 1022)
 
-[node name="Platform2" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
-position = Vector2(5035, 686)
+[node name="Platform4" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(2723, 1022)
 
 [node name="Platform5" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
-position = Vector2(4272, 346)
+position = Vector2(3535, 1022)
+
+[node name="Platform8" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(4393, 1022)
+
+[node name="Platform9" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(5282, 1022)
+
+[node name="Platform10" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(6145, 1022)
+
+[node name="Platform11" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(6994, 1022)
+
+[node name="Platform12" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(9404, 1022)
+
+[node name="Platform13" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(10222, 1022)
+
+[node name="Platform14" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(11034, 1022)
+
+[node name="Platform15" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(11892, 1022)
+
+[node name="Platform16" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(12781, 1022)
+
+[node name="Platform17" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(13644, 1022)
+
+[node name="Platform18" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(14493, 1022)
+
+[node name="Platform32" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(40028, 1072)
+
+[node name="Platform33" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(40846, 1072)
+
+[node name="Platform34" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(41658, 1072)
+
+[node name="Platform35" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(42516, 1072)
+
+[node name="Platform36" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(43405, 1072)
+
+[node name="Platform37" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(44268, 1072)
+
+[node name="Platform38" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(45117, 1072)
+
+[node name="Platform29" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(29062, 1043)
+
+[node name="Platform30" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(33976, 1078)
+
+[node name="Platform2" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(8647, 686)
 
 [node name="Platform3" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
-position = Vector2(8217, 718)
+position = Vector2(48641, 1028)
+
+[node name="Platform39" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(50344, 857)
 
 [node name="Platform6" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
-position = Vector2(9885, 1000)
+position = Vector2(53000, 1000)
+
+[node name="Platform7" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(54158, 1093)
+
+[node name="Platform40" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(55001, 1093)
+
+[node name="Platform41" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(55641, 1093)
+
+[node name="Platform42" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(56306, 1093)
 
 [node name="HighPlatform" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
-position = Vector2(3557, 800)
+position = Vector2(7755, 800)
+
+[node name="Platform19" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(16121, 686)
+
+[node name="Platform20" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(23106, 847)
+
+[node name="Platform21" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(23807, 625)
+
+[node name="Platform22" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(24588, 519)
+
+[node name="Platform23" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(25430, 907)
+
+[node name="Platform24" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(26176, 1099)
+
+[node name="Platform25" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(26882, 902)
+
+[node name="Platform26" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(26882, 902)
+
+[node name="Platform27" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(27577, 741)
+
+[node name="Platform28" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(28348, 590)
+
+[node name="HighPlatform4" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
+position = Vector2(15229, 800)
+
+[node name="HighPlatform5" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
+position = Vector2(33155, 860)
+
+[node name="HighPlatform6" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
+position = Vector2(34624, 915)
+
+[node name="Platform31" parent="Level/Platforms" instance=ExtResource("11_lgwi6")]
+position = Vector2(35330, 937)
+
+[node name="HighPlatform7" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
+position = Vector2(36081, 814)
+
+[node name="HighPlatform8" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
+position = Vector2(36872, 1061)
+
+[node name="HighPlatform9" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
+position = Vector2(37699, 1232)
 
 [node name="HighPlatform2" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
-position = Vector2(7465, 813)
+position = Vector2(47843, 813)
 
 [node name="HighPlatform3" parent="Level/Platforms" instance=ExtResource("12_8dtxb")]
-position = Vector2(9055, 836)
+position = Vector2(49679, 836)
 
 [node name="Enemies" type="Node" parent="Level"]
 
 [node name="Snail2" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
 z_index = 1
-position = Vector2(5089, 602)
+position = Vector2(8701, 602)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("14_0canr")
 
 [node name="Enemy" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
-position = Vector2(11375, 931)
+position = Vector2(51425, 931)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Enemy2" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+position = Vector2(54875, 1009)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Enemy3" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+position = Vector2(55716, 1005)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Enemy4" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+position = Vector2(56251, 1005)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("14_0canr")
 
 [node name="SpikeyEnemy" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
-position = Vector2(6226, 939)
+position = Vector2(46391, 939)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("16_sy1ao")
 SPEED = 80
 can_be_stomped = false
 
 [node name="SpikeyEnemy2" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
-position = Vector2(2750, 944)
+position = Vector2(7779, 393)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="Snail3" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(16133, 599)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail10" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(19131, 931)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail4" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(22970, 760)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail5" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(23937, 541)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail6" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(24437, 435)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail7" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(25484, 823)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail8" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(26180, 1013)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail9" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(27025, 815)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail11" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(27683, 655)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail12" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(28449, 502)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail13" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(36062, 404)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail14" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(36959, 648)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="Snail15" parent="Level/Enemies" instance=ExtResource("13_hhwvw")]
+z_index = 1
+position = Vector2(37788, 822)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("14_0canr")
+
+[node name="SpikeyEnemy3" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(15240, 395)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy5" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(17717, 935)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy8" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(20499, 939)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy9" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(21561, 945)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy6" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(17095, 941)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy4" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(33168, 455)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy12" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(34637, 510)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy10" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(30124, 939)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("16_sy1ao")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy11" parent="Level/Enemies" instance=ExtResource("15_mlkas")]
+position = Vector2(30898, 939)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("16_sy1ao")
 SPEED = 80
 can_be_stomped = false
@@ -539,25 +2898,134 @@ position = Vector2(1113, 942)
 
 [node name="Mushroom2" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
 z_index = -1
-position = Vector2(2323, 942)
+position = Vector2(1904, 942)
+
+[node name="Mushroom8" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(2722, 942)
+
+[node name="Mushroom9" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(3534, 942)
+
+[node name="Mushroom10" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(4392, 942)
+
+[node name="Mushroom11" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(5281, 942)
+
+[node name="Mushroom12" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(6144, 942)
+
+[node name="Mushroom13" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(6993, 942)
+
+[node name="Mushroom14" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(9403, 942)
+
+[node name="Mushroom15" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(10221, 942)
+
+[node name="Mushroom16" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(11033, 942)
+
+[node name="Mushroom17" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(11891, 942)
+
+[node name="Mushroom18" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(12780, 942)
+
+[node name="Mushroom19" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(13643, 942)
+
+[node name="Mushroom20" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(14492, 942)
+
+[node name="Mushroom26" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(40027, 992)
+
+[node name="Mushroom27" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(40845, 992)
+
+[node name="Mushroom28" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(41657, 992)
+
+[node name="Mushroom29" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(42515, 992)
+
+[node name="Mushroom30" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(43404, 992)
+
+[node name="Mushroom31" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(44267, 992)
+
+[node name="Mushroom32" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(45116, 992)
+
+[node name="Mushroom21" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(29061, 963)
+
+[node name="Mushroom23" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(33975, 998)
+
+[node name="Mushroom24" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(35329, 857)
+
+[node name="Mushroom22" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(32500, 934)
+
+[node name="Mushroom25" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(39283, 934)
 
 [node name="Mushroom3" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
 z_index = -1
-position = Vector2(6642, 942)
+position = Vector2(46807, 942)
 
 [node name="Mushroom4" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
 z_index = -1
-position = Vector2(10067, 916)
+position = Vector2(53182, 916)
+
+[node name="Mushroom6" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(54340, 1009)
 
 [node name="Mushroom5" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
 z_index = -1
-position = Vector2(11884, 926)
+position = Vector2(51934, 926)
+
+[node name="Mushroom7" parent="Level/Mushrooms" instance=ExtResource("17_52l8e")]
+z_index = -1
+position = Vector2(48827, 947)
 
 [node name="Finish" parent="Level" instance=ExtResource("18_w8mqv")]
 z_index = -1
-position = Vector2(13294, 928)
-target_level = ExtResource("19_uqrrn")
+position = Vector2(57436, 928)
+target_level = ExtResource("19_tvf83")
 target_level_music = ExtResource("20_rmkep")
+is_final_level = true
 
 [node name="SpawnPoint" type="Marker2D" parent="Level"]
 position = Vector2(192, 512)

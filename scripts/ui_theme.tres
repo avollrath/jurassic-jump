@@ -1,6 +1,22 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ctns4fvpvo0gj"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://ctns4fvpvo0gj"]
 
 [ext_resource type="FontFile" uid="uid://dipkhtx5t332r" path="res://assets/fonts/Gorditas-Regular.ttf" id="1_6rt2l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi05v"]
+bg_color = Color(0.869588, 0.426209, 0.12708, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.963524, 0.516349, 0.245412, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.588235)
+shadow_size = 2
+shadow_offset = Vector2(0, 1)
+anti_aliasing_size = 0.01
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6twxr"]
 bg_color = Color(0.869588, 0.426209, 0.12708, 1)
@@ -13,9 +29,9 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-shadow_color = Color(0, 0, 0, 0.0901961)
+shadow_color = Color(0, 0, 0, 0.588235)
 shadow_size = 2
-shadow_offset = Vector2(0, 4)
+shadow_offset = Vector2(0, 1)
 anti_aliasing_size = 0.01
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dw488"]
@@ -31,7 +47,7 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-shadow_color = Color(0, 0, 0, 0.0901961)
+shadow_color = Color(0, 0, 0, 0.156863)
 shadow_size = 4
 shadow_offset = Vector2(0, 4)
 anti_aliasing_size = 0.01
@@ -55,7 +71,10 @@ anti_aliasing_size = 0.01
 [resource]
 default_font = ExtResource("1_6rt2l")
 default_font_size = 16
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.994279, 0.950899, 0.930808, 1)
 Button/font_sizes/font_size = 48
+Button/styles/focus = SubResource("StyleBoxFlat_hi05v")
 Button/styles/hover = SubResource("StyleBoxFlat_6twxr")
 Button/styles/normal = SubResource("StyleBoxFlat_dw488")
 Button/styles/pressed = SubResource("StyleBoxFlat_5057s")

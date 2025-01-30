@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://br6fcokjl6l0u"]
+[gd_scene load_steps=7 format=3 uid="uid://br6fcokjl6l0u"]
 
 [ext_resource type="Theme" uid="uid://ctns4fvpvo0gj" path="res://scripts/ui_theme.tres" id="1_4xbvq"]
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="2_ot4xf"]
@@ -10,6 +10,13 @@ corner_radius_top_left = 60
 corner_radius_top_right = 60
 corner_radius_bottom_right = 60
 corner_radius_bottom_left = 60
+
+[sub_resource type="InputEventKey" id="InputEventKey_ydh6b"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_nql1n"]
+events = [SubResource("InputEventKey_ydh6b")]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -91,6 +98,7 @@ offset_right = 267.0
 offset_bottom = 423.0
 grow_horizontal = 2
 grow_vertical = 0
+shortcut = SubResource("Shortcut_nql1n")
 text = "Back to Main Menu"
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

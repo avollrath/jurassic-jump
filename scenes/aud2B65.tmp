@@ -1,0 +1,68 @@
+[gd_scene load_steps=13 format=3 uid="uid://dt2rldhjuox3n"]
+
+[ext_resource type="Script" path="res://scripts/audio_manager.gd" id="1_febk3"]
+[ext_resource type="AudioStream" uid="uid://cr5jd7qi3h4py" path="res://assets/music/backgroundMusic1.mp3" id="2_e0tox"]
+[ext_resource type="AudioStream" uid="uid://bp1v1pd6nraem" path="res://assets/music/gameover.mp3" id="3_hdqrj"]
+[ext_resource type="AudioStream" uid="uid://ckrf5dr1e3ln8" path="res://assets/music/winner.mp3" id="4_odtbh"]
+[ext_resource type="AudioStream" uid="uid://b5od0s4i6blg5" path="res://assets/sounds/bounce.mp3" id="5_t5o0d"]
+[ext_resource type="AudioStream" uid="uid://bf8ijdkyu5oh5" path="res://assets/sounds/coin.mp3" id="6_6pa1u"]
+[ext_resource type="AudioStream" uid="uid://cm67ufeg0hmch" path="res://assets/sounds/die.mp3" id="7_olwk2"]
+[ext_resource type="AudioStream" uid="uid://c604x8ce2oyuk" path="res://assets/sounds/fight.mp3" id="8_ntbcq"]
+[ext_resource type="AudioStream" uid="uid://qub544qxmqsh" path="res://assets/sounds/damage.mp3" id="9_3lis7"]
+[ext_resource type="AudioStream" uid="uid://rvdjn1mt5uh3" path="res://assets/sounds/jump.mp3" id="9_f4acq"]
+[ext_resource type="AudioStream" uid="uid://c224fmsm0vqe3" path="res://assets/sounds/win.mp3" id="10_ho10j"]
+[ext_resource type="AudioStream" uid="uid://bpdj87po7wv8d" path="res://assets/sounds/land.mp3" id="10_ouk32"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_febk3")
+
+[node name="Music" type="Node" parent="."]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("2_e0tox")
+bus = &"Music"
+
+[node name="GameOverMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("3_hdqrj")
+bus = &"Music"
+
+[node name="WinnerMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("4_odtbh")
+bus = &"Music"
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("5_t5o0d")
+bus = &"SFX"
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("6_6pa1u")
+volume_db = -12.27
+bus = &"SFX"
+
+[node name="DieSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("7_olwk2")
+bus = &"SFX"
+
+[node name="FightSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("8_ntbcq")
+bus = &"SFX"
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("9_f4acq")
+bus = &"SFX"
+
+[node name="WinSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("10_ho10j")
+bus = &"SFX"
+
+[node name="DamageSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("9_3lis7")
+bus = &"SFX"
+
+[node name="LandSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("10_ouk32")
+volume_db = -5.0
+pitch_scale = 2.0
+bus = &"SFX"

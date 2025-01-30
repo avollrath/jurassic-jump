@@ -7,7 +7,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	player = body
-	GameManager.decrease_health()
+	GameManager.decrease_health("killzone")
 	timer.start()
 
 func _on_timer_timeout() -> void:

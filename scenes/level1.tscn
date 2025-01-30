@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dbg6pn3l745r8"]
+[gd_scene load_steps=25 format=3 uid="uid://dbg6pn3l745r8"]
 
 [ext_resource type="PackedScene" uid="uid://y8jax64gdbgg" path="res://scenes/player.tscn" id="1_6gi5y"]
 [ext_resource type="Texture2D" uid="uid://cs22flk4f0hlo" path="res://assets/sprites/blurred assets/background1.jpg" id="1_tguwp"]
@@ -18,8 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://bolb5lmyjtskm" path="res://scenes/level2.tscn" id="12_shv5m"]
 [ext_resource type="AudioStream" uid="uid://byntc27wv4rkc" path="res://assets/sounds/snail.mp3" id="13_8asan"]
 [ext_resource type="AudioStream" uid="uid://djco8yw50comu" path="res://assets/music/backgroundMusic2.mp3" id="13_31rhy"]
-
-[sub_resource type="GDScript" id="GDScript_y3cvm"]
 
 [sub_resource type="Shader" id="Shader_c4k4h"]
 code = "shader_type canvas_item;
@@ -79,7 +77,6 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3imwi"]
 
 [node name="Level1" type="Node2D"]
-script = SubResource("GDScript_y3cvm")
 
 [node name="Level" type="Node" parent="."]
 
@@ -252,6 +249,7 @@ position = Vector2(7072, 1095)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(4576, 928)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("13_8asan")
 
 [node name="Mushrooms" type="Node" parent="Level"]
@@ -270,6 +268,13 @@ DECELERATION = 500.0
 [node name="Finish" parent="Level" instance=ExtResource("11_npr13")]
 z_index = -1
 position = Vector2(7104, 928)
+target_level = ExtResource("12_shv5m")
+target_level_music = ExtResource("13_31rhy")
+
+[node name="Finish2" parent="Level" instance=ExtResource("11_npr13")]
+z_index = -200
+position = Vector2(448, 1024)
+scale = Vector2(0.001, 0.001)
 target_level = ExtResource("12_shv5m")
 target_level_music = ExtResource("13_31rhy")
 

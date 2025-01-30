@@ -2,6 +2,7 @@ extends CharacterBody2D
 @onready var flicker_timer: Timer = $FlickerTimer
 @onready var particles: GPUParticles2D = $FightParticles
 @onready var wheels_particles: GPUParticles2D = $WheelsParticles
+@onready var camera: Camera2D = $Camera2D
 
 @onready var timer: Timer = $Timer
 @export var SPEED = 400.0
@@ -9,8 +10,14 @@ extends CharacterBody2D
 @export var DECELERATION = 200.0  # Rate of slowing down when no input is provided.
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var player_got_hit: bool = false
+var player_invincible: bool = false
 var was_in_air: bool = false
 var just_landed: bool = false
+@onready var original_modulate := animated_sprite.modulate
+
+func _ready() -> void:
+	await get_tree().create_timer(0.3).timeout
+	camera.enabled = true
 
 func _physics_process(delta: float) -> void:
 	# 1) Apply gravity if not on floor
@@ -40,6 +47,7 @@ func _physics_process(delta: float) -> void:
 	if was_in_air and on_floor_now:
 		just_landed = true
 		wheels_particles.emitting = true
+		particles.one_shot = true
 		AudioManager.land_sound.play()
 	else:
 		just_landed = false
@@ -61,34 +69,30 @@ func deal_damage() -> void:
 		
 func get_damage(enemy_global_position: Vector2) -> void:
 	if not player_got_hit:
+		if not player_invincible:
+			GameManager.decrease_health()
+			player_invincible = true
 		player_got_hit = true
 		timer.start()
-		GameManager.decrease_health()
 		
-		# Determine direction of knockback based on enemy's position relative to player.
 	var knockback_force := Vector2.ZERO
 	if global_position.x < enemy_global_position.x:
-		# Enemy is to the right of the player, so knockback to the left.
 		knockback_force.x = -500
 	else:
-		# Enemy is to the left of the player, so knockback to the right.
 		knockback_force.x = 500
 		
 	knockback_force.y = -600
 		
 	velocity = knockback_force
 		
-		# Start flickering effect.
-	flicker_red(0.4)
+	flicker_red(1)
 
 func _on_timer_timeout() -> void:
-	print("Time out!")
 	player_got_hit = false
 	
 func flicker_red(duration: float) -> void:
 	var flicker_time := duration
-	var original_modulate := animated_sprite.modulate
-	var flicker_interval := 0.1
+	var flicker_interval := 0.15
 	var elapsed := 0.0
 
 	while elapsed < flicker_time:
@@ -105,8 +109,10 @@ func flicker_red(duration: float) -> void:
 		flicker_timer.one_shot = true
 		flicker_timer.start()
 		await flicker_timer.timeout
-
 		elapsed += flicker_interval
+		
+	animated_sprite.modulate = original_modulate
+	player_invincible = false
 
 
 

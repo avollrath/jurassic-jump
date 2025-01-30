@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://d1d3baiqgkkp6"]
+
+[ext_resource type="Texture2D" uid="uid://2l3uglaky1tj" path="res://assets/sprites/loading_spinner.png" id="1_66grr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njnpm"]
+atlas = ExtResource("1_66grr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry1is"]
+atlas = ExtResource("1_66grr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xo8q"]
+atlas = ExtResource("1_66grr")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3r2y"]
+atlas = ExtResource("1_66grr")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsejt"]
+atlas = ExtResource("1_66grr")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxn66"]
+atlas = ExtResource("1_66grr")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jying"]
+atlas = ExtResource("1_66grr")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwmx8"]
+atlas = ExtResource("1_66grr")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xsyes"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njnpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry1is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xo8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3r2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsejt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxn66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jying")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwmx8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="LoadingSpinner" type="Control"]
+z_index = 11
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 10
+clip_contents = true
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_xsyes")
+autoplay = "default"
+frame = 6
+frame_progress = 0.197794

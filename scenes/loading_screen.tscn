@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://7x1evusmg02k"]
+
+[ext_resource type="Texture2D" uid="uid://cw6sjov2nii38" path="res://assets/sprites/logo.png" id="2_gh01n"]
+[ext_resource type="Theme" uid="uid://ctns4fvpvo0gj" path="res://scripts/ui_theme.tres" id="2_id53u"]
+
+[sub_resource type="GDScript" id="GDScript_pnlvm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vheh1"]
+bg_color = Color(0.858824, 0.858824, 0.858824, 0.168627)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_372ew"]
+bg_color = Color(0.441574, 0.927104, 1.15514e-06, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_offset = Vector2(2, 0)
+anti_aliasing_size = 2.0
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = SubResource("GDScript_pnlvm")
+
+[node name="Background" type="ColorRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -312.0
+offset_top = 104.0
+offset_right = 312.0
+offset_bottom = 568.0
+grow_horizontal = 2
+texture = ExtResource("2_gh01n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LoadingLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = 36.0
+offset_right = 216.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_id53u")
+theme_override_font_sizes/font_size = 60
+text = "Digging up dinosaurs..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadingProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -488.0
+offset_top = 188.0
+offset_right = 488.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_vheh1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_372ew")
+value = 2.0
+
+[node name="MessageTimer" type="Timer" parent="."]
+autostart = true

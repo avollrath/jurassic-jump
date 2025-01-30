@@ -54,6 +54,7 @@ func get_stomped(body: Node2D) -> void:
 	got_stomped = true
 	
 	AudioManager.fight_sound.play()
+	GameManager.add_points(50)
 	await get_tree().create_timer(0.5).timeout
 	queue_free()
 

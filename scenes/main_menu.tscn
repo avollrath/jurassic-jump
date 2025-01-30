@@ -1,12 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://75e4pjjygybg"]
+[gd_scene load_steps=7 format=3 uid="uid://75e4pjjygybg"]
 
 [ext_resource type="Theme" uid="uid://ctns4fvpvo0gj" path="res://scripts/ui_theme.tres" id="1_22d0k"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_cg51m"]
 [ext_resource type="Texture2D" uid="uid://evmb2bn5tut4" path="res://assets/sprites/menu_frame.png" id="1_y4gav"]
 [ext_resource type="Texture2D" uid="uid://cw6sjov2nii38" path="res://assets/sprites/logo.png" id="2_6t7kt"]
-[ext_resource type="Texture2D" uid="uid://c66j566toee5m" path="res://assets/sprites/blurred assets/menu_background2.jpg" id="3_swiye"]
 
-[node name="main_menu" type="Control"]
+[sub_resource type="InputEventKey" id="InputEventKey_yie48"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_5lnts"]
+events = [SubResource("InputEventKey_yie48")]
+
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,15 +22,6 @@ grow_vertical = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_22d0k")
 script = ExtResource("1_cg51m")
-
-[node name="Background" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_swiye")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -71,16 +68,18 @@ expand_mode = 1
 [node name="StartButton" type="Button" parent="Panel"]
 layout_mode = 2
 offset_left = 93.0
-offset_top = 200.0
+offset_top = 294.0
 offset_right = 463.0
-offset_bottom = 299.0
+offset_bottom = 393.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(-19, 39)
 theme = ExtResource("1_22d0k")
+shortcut = SubResource("Shortcut_5lnts")
 text = "Start Game"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -98,13 +97,35 @@ theme_override_constants/separation = 10
 alignment = 1
 
 [node name="OptionsButton" type="Button" parent="Panel/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("1_22d0k")
+disabled = true
 text = "Options
 "
 
 [node name="ExitButton" type="Button" parent="Panel/VBoxContainer"]
+visible = false
 layout_mode = 2
+disabled = true
 text = "Exit"
 
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.982
+anchor_right = 0.5
+anchor_bottom = 0.982
+offset_left = -123.0
+offset_top = -76.5601
+offset_right = 123.0
+offset_bottom = -5.56006
+grow_horizontal = 2
+grow_vertical = 0
+text = "Version 0.1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Panel/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://b4yf8ehcup6hv"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_iwffj"]
+[ext_resource type="PackedScene" uid="uid://75e4pjjygybg" path="res://scenes/main_menu.tscn" id="1_roiy3"]
+[ext_resource type="PackedScene" uid="uid://7x1evusmg02k" path="res://scenes/loading_screen.tscn" id="2_aavxw"]
+[ext_resource type="PackedScene" uid="uid://c66e5rcra61ww" path="res://scenes/ui.tscn" id="2_kqrqm"]
+[ext_resource type="Texture2D" uid="uid://c66j566toee5m" path="res://assets/sprites/blurred assets/menu_background2.jpg" id="2_p36s3"]
+[ext_resource type="Script" path="res://scripts/ui.gd" id="4_8slax"]
+[ext_resource type="PackedScene" uid="uid://br6fcokjl6l0u" path="res://scenes/game_over.tscn" id="5_ghy6x"]
+[ext_resource type="PackedScene" uid="uid://d1d3baiqgkkp6" path="res://scenes/loading_spinner.tscn" id="8_h3dxe"]
+[ext_resource type="PackedScene" uid="uid://d0cjk0ruq624t" path="res://scenes/winner.tscn" id="9_mhwjq"]
+
+[node name="main" type="Node2D"]
+position = Vector2(957, 540)
+script = ExtResource("1_iwffj")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_p36s3")
+
+[node name="GameOver" parent="." instance=ExtResource("5_ghy6x")]
+unique_name_in_owner = true
+visible = false
+
+[node name="LoadingScreen" parent="." instance=ExtResource("2_aavxw")]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="MainMenu" parent="." instance=ExtResource("1_roiy3")]
+unique_name_in_owner = true
+visible = false
+offset_left = 3.0
+offset_right = 3.0
+size_flags_vertical = 4
+
+[node name="UI" parent="." instance=ExtResource("2_kqrqm")]
+visible = false
+script = ExtResource("4_8slax")
+
+[node name="LoadingSpinner" parent="." instance=ExtResource("8_h3dxe")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Winner" parent="." instance=ExtResource("9_mhwjq")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5

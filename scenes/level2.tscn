@@ -115,7 +115,7 @@ position = Vector2(6368, 320)
 position = Vector2(8384, 320)
 
 [node name="Cloud7" parent="Level/ParallaxBackground/ParallaxLayer - 4" instance=ExtResource("7_tkhbw")]
-position = Vector2(9408, 256)
+position = Vector2(18961, 256)
 
 [node name="ParallaxLayer -3" type="ParallaxLayer" parent="Level/ParallaxBackground"]
 motion_scale = Vector2(0.3, 0.3)
@@ -168,7 +168,23 @@ flip_v = true
 [node name="Foreground3" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
 modulate = Color(0.560955, 0.560955, 0.560955, 1)
 z_index = 1
-position = Vector2(12752, 992)
+position = Vector2(22305, 992)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_6stbm")
+flip_v = true
+
+[node name="Foreground4" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(17189.3, 992)
+scale = Vector2(1.53784, -1.53784)
+texture = ExtResource("6_6stbm")
+flip_v = true
+
+[node name="Foreground5" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 1"]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+z_index = 1
+position = Vector2(12397, 1012)
 scale = Vector2(1.53784, -1.53784)
 texture = ExtResource("6_6stbm")
 flip_v = true
@@ -248,7 +264,7 @@ playback_auto_capture_transition_type = 5
 [node name="Fern6" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
 modulate = Color(0.233925, 0.233926, 0.233925, 1)
 z_index = 1
-position = Vector2(12308.6, 1248)
+position = Vector2(22075.6, 1248)
 rotation = -0.390954
 scale = Vector2(1.16213, -1.16213)
 texture = ExtResource("7_a5pb2")
@@ -265,7 +281,7 @@ playback_auto_capture_transition_type = 5
 [node name="Fern7" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
 modulate = Color(0.233925, 0.233926, 0.233925, 1)
 z_index = 1
-position = Vector2(10420.6, 1248)
+position = Vector2(19973.6, 1248)
 rotation = -0.390954
 scale = Vector2(1.16213, -1.16213)
 texture = ExtResource("7_a5pb2")
@@ -282,7 +298,7 @@ playback_auto_capture_transition_type = 5
 [node name="Fern8" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
 modulate = Color(0.233925, 0.233926, 0.233925, 1)
 z_index = 1
-position = Vector2(14075, 1248)
+position = Vector2(24015, 1248)
 rotation = -0.390954
 scale = Vector2(1.16213, -1.16213)
 texture = ExtResource("7_a5pb2")
@@ -290,6 +306,74 @@ offset = Vector2(0, 200)
 flip_v = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern8"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern9" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(16959.9, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern9"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern10" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(14857.9, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern10"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern12" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(12658, 1192)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern12"]
+libraries = {
+"": SubResource("AnimationLibrary_ei7cw")
+}
+autoplay = "sway"
+playback_auto_capture_transition_type = 5
+
+[node name="Fern11" type="Sprite2D" parent="Level/ParallaxForeground/ParallaxLayer 2"]
+modulate = Color(0.233925, 0.233926, 0.233925, 1)
+z_index = 1
+position = Vector2(18899.3, 1248)
+rotation = -0.390954
+scale = Vector2(1.16213, -1.16213)
+texture = ExtResource("7_a5pb2")
+offset = Vector2(0, 200)
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/ParallaxForeground/ParallaxLayer 2/Fern11"]
 libraries = {
 "": SubResource("AnimationLibrary_ei7cw")
 }
@@ -413,58 +497,58 @@ position = Vector2(7473, 194)
 position = Vector2(7569, 194)
 
 [node name="Coin31" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(8959, 318)
+position = Vector2(18512, 318)
 
 [node name="Coin32" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(9055, 318)
+position = Vector2(18608, 318)
 
 [node name="Coin33" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(9151, 318)
+position = Vector2(18704, 318)
 
 [node name="Coin34" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(8959, 204)
+position = Vector2(18512, 204)
 
 [node name="Coin35" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(9055, 204)
+position = Vector2(18608, 204)
 
 [node name="Coin36" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(9151, 204)
+position = Vector2(18704, 204)
 
 [node name="Coin37" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(9978, 582)
+position = Vector2(19531, 582)
 
 [node name="Coin38" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(10074, 582)
+position = Vector2(19627, 582)
 
 [node name="Coin39" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(10170, 582)
+position = Vector2(19723, 582)
 
 [node name="Coin40" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(9978, 468)
+position = Vector2(19531, 468)
 
 [node name="Coin41" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(10074, 468)
+position = Vector2(19627, 468)
 
 [node name="Coin42" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(10170, 468)
+position = Vector2(19723, 468)
 
 [node name="Coin43" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(11791, 613)
+position = Vector2(21558, 613)
 
 [node name="Coin44" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(11887, 613)
+position = Vector2(21654, 613)
 
 [node name="Coin45" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(11983, 613)
+position = Vector2(21750, 613)
 
 [node name="Coin46" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(11791, 499)
+position = Vector2(21558, 499)
 
 [node name="Coin47" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(11887, 499)
+position = Vector2(21654, 499)
 
 [node name="Coin48" parent="Level/Coins" instance=ExtResource("5_3s2uf")]
-position = Vector2(11983, 499)
+position = Vector2(21750, 499)
 
 [node name="Grounds" type="Node" parent="Level"]
 
@@ -477,11 +561,20 @@ position = Vector2(2480, 1095)
 [node name="Ground3" parent="Level/Grounds" instance=ExtResource("6_urbbt")]
 position = Vector2(6104, 1095)
 
+[node name="Ground6" parent="Level/Grounds" instance=ExtResource("6_urbbt")]
+position = Vector2(9505, 1095)
+
+[node name="Ground7" parent="Level/Grounds" instance=ExtResource("6_urbbt")]
+position = Vector2(11103, 1095)
+
+[node name="Ground8" parent="Level/Grounds" instance=ExtResource("6_urbbt")]
+position = Vector2(14985, 1095)
+
 [node name="Ground4" parent="Level/Grounds" instance=ExtResource("6_urbbt")]
-position = Vector2(13262, 1095)
+position = Vector2(23202, 1095)
 
 [node name="Ground5" parent="Level/Grounds" instance=ExtResource("6_urbbt")]
-position = Vector2(11326, 1095)
+position = Vector2(21093, 1095)
 
 [node name="Platforms" type="Node" parent="Level"]
 
@@ -497,8 +590,20 @@ position = Vector2(4272, 346)
 [node name="Platform3" parent="Level/Platforms" instance=ExtResource("7_ph4uu")]
 position = Vector2(8217, 718)
 
+[node name="Platform4" parent="Level/Platforms" instance=ExtResource("7_ph4uu")]
+position = Vector2(12512, 513)
+
+[node name="Platform7" parent="Level/Platforms" instance=ExtResource("7_ph4uu")]
+position = Vector2(16185, 722)
+
+[node name="Platform8" parent="Level/Platforms" instance=ExtResource("7_ph4uu")]
+position = Vector2(16986, 419)
+
+[node name="Platform9" parent="Level/Platforms" instance=ExtResource("7_ph4uu")]
+position = Vector2(17621, 1076)
+
 [node name="Platform6" parent="Level/Platforms" instance=ExtResource("7_ph4uu")]
-position = Vector2(9885, 1000)
+position = Vector2(19438, 1000)
 
 [node name="HighPlatform" parent="Level/Platforms" instance=ExtResource("8_4akgg")]
 position = Vector2(3557, 800)
@@ -506,28 +611,88 @@ position = Vector2(3557, 800)
 [node name="HighPlatform2" parent="Level/Platforms" instance=ExtResource("8_4akgg")]
 position = Vector2(7465, 813)
 
+[node name="HighPlatform4" parent="Level/Platforms" instance=ExtResource("8_4akgg")]
+position = Vector2(13664, 1156)
+
 [node name="HighPlatform3" parent="Level/Platforms" instance=ExtResource("8_4akgg")]
-position = Vector2(9055, 836)
+position = Vector2(18608, 836)
 
 [node name="Enemies" type="Node" parent="Level"]
 
 [node name="Snail2" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
 z_index = 1
 position = Vector2(5089, 602)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Snail3" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+z_index = 1
+position = Vector2(2886, 612)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("11_kvlwm")
 
 [node name="Enemy" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
-position = Vector2(11375, 931)
+position = Vector2(21142, 931)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Enemy2" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(19327, 914)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Enemy3" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(18594, 423)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Enemy4" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(17074, 342)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Enemy5" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(16092, 638)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Enemy6" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(13647, 749)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Enemy7" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(12520, 426)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Enemy8" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(10922, 934)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("11_kvlwm")
+
+[node name="Enemy9" parent="Level/Enemies" instance=ExtResource("9_fm03y")]
+position = Vector2(8285, 631)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("11_kvlwm")
 
 [node name="SpikeyEnemy" parent="Level/Enemies" instance=ExtResource("10_md03c")]
 position = Vector2(6226, 939)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("13_hmvq3")
 SPEED = 80
 can_be_stomped = false
 
 [node name="SpikeyEnemy2" parent="Level/Enemies" instance=ExtResource("10_md03c")]
-position = Vector2(2750, 944)
+position = Vector2(9188, 944)
+scale = Vector2(0.7, 0.7)
+enemy_sound_file = ExtResource("13_hmvq3")
+SPEED = 80
+can_be_stomped = false
+
+[node name="SpikeyEnemy3" parent="Level/Enemies" instance=ExtResource("10_md03c")]
+position = Vector2(15020, 944)
+scale = Vector2(0.7, 0.7)
 enemy_sound_file = ExtResource("13_hmvq3")
 SPEED = 80
 can_be_stomped = false
@@ -546,17 +711,25 @@ position = Vector2(2323, 942)
 z_index = -1
 position = Vector2(6642, 942)
 
+[node name="Mushroom6" parent="Level/Mushrooms" instance=ExtResource("10_q5u2r")]
+z_index = -1
+position = Vector2(11573, 942)
+
 [node name="Mushroom4" parent="Level/Mushrooms" instance=ExtResource("10_q5u2r")]
 z_index = -1
-position = Vector2(10067, 916)
+position = Vector2(19620, 916)
+
+[node name="Mushroom7" parent="Level/Mushrooms" instance=ExtResource("10_q5u2r")]
+z_index = -1
+position = Vector2(17638, 991)
 
 [node name="Mushroom5" parent="Level/Mushrooms" instance=ExtResource("10_q5u2r")]
 z_index = -1
-position = Vector2(11884, 926)
+position = Vector2(21651, 926)
 
 [node name="Finish" parent="Level" instance=ExtResource("11_63pl8")]
 z_index = -1
-position = Vector2(13294, 928)
+position = Vector2(23234, 928)
 target_level = ExtResource("19_2t3fm")
 target_level_music = ExtResource("20_g41uq")
 

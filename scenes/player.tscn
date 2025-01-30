@@ -69,8 +69,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xhksq"]
-radius = 73.0
-height = 202.0
+radius = 64.0
+height = 168.0
 
 [sub_resource type="Curve" id="Curve_fgf3k"]
 _data = [Vector2(0, 1), 0.0, 0.0226586, 0, 0, Vector2(1, 0), -0.616748, 0.0, 0, 0]
@@ -89,7 +89,7 @@ gradient = SubResource("Gradient_yb4xl")
 lifetime_randomness = 0.3
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(200, 1, 1)
+emission_box_extents = Vector3(100, 1, 1)
 direction = Vector3(0, 1, 0)
 spread = 80.0
 initial_velocity_min = 100.0
@@ -145,17 +145,19 @@ script = ExtResource("1_k5b5s")
 JUMP_VELOCITY = -1500.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -110)
+position = Vector2(0, -89.57)
+scale = Vector2(0.82, 0.82)
 sprite_frames = SubResource("SpriteFrames_v6cpp")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -102)
+position = Vector2(0, -85)
 shape = SubResource("CapsuleShape2D_xhksq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(378, -265)
+enabled = false
 process_callback = 0
 limit_top = 0
 limit_bottom = 1080
@@ -172,12 +174,10 @@ one_shot = true
 wait_time = 0.1
 
 [node name="FightParticles" type="GPUParticles2D" parent="."]
-emitting = false
 amount = 200
 process_material = SubResource("ParticleProcessMaterial_kf87v")
 texture = SubResource("GradientTexture2D_lx4lc")
 lifetime = 0.2
-one_shot = true
 explosiveness = 0.6
 randomness = 0.6
 fixed_fps = 60

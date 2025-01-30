@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0cjk0ruq624t"]
+
+[ext_resource type="Theme" uid="uid://ctns4fvpvo0gj" path="res://scripts/ui_theme.tres" id="1_qcki0"]
+[ext_resource type="Script" path="res://scripts/winner.gd" id="2_n5hdv"]
+[ext_resource type="Texture2D" uid="uid://cfo77pfmjj1k7" path="res://assets/sprites/blurred assets/menu_background.jpg" id="3_h1chq"]
+[ext_resource type="Script" path="res://scripts/final_text.gd" id="4_soksx"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ydh6b"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_nql1n"]
+events = [SubResource("InputEventKey_ydh6b")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpejn"]
+bg_color = Color(0, 0, 0, 0.478431)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="Winner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qcki0")
+script = ExtResource("2_n5hdv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_h1chq")
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -267.0
+offset_top = -172.0
+offset_right = 267.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+shortcut = SubResource("Shortcut_nql1n")
+text = "Back to Main Menu"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -605.0
+offset_top = -492.0
+offset_right = 605.0
+offset_bottom = 348.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cpejn")
+
+[node name="WonLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -522.0
+offset_top = 24.0
+offset_right = 522.0
+offset_bottom = 243.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 180
+text = "You won!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScore" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -522.0
+offset_top = -180.0
+offset_right = 522.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "High Score: 1430"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FinalText" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -472.0
+offset_top = -472.0
+offset_right = 496.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("4_soksx")

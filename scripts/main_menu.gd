@@ -1,17 +1,39 @@
 extends Node
-@onready var ui: CanvasLayer = $"../UI"
+
+@onready var ui: CanvasLayer             = $"../UI"
+@onready var background_image: TextureRect = $"../BackgroundImage"
+@onready var main_menu: Control          = $"."
+
+var next_scene1_path = "res://scenes/level1.tscn"
+var packed_scene: PackedScene
+var level_instance: Node   # We'll store the instantiated level here
 
 func _ready() -> void:
-	AudioManager.background_music.play()
-	ui.hide()
+	# We'll do the actual instantiation in init_resources()
+	pass
+
+func init_resources() -> void:
+	# AFTER ResourcePaths is fully loaded
+	if ResourcePaths.loaded_resources.has(next_scene1_path):
+		packed_scene = ResourcePaths.loaded_resources[next_scene1_path] as PackedScene
+		# Pre‐instantiate the level right now
+		level_instance = packed_scene.instantiate()
+		level_instance.name = "Level1"
+		
+		# Hide it so it doesn't appear yet
+		level_instance.visible = false
+		
+		# Add it under the same parent (likely "main")
+		
+	else:
+		push_warning("MainMenu: Could not find Level1 in ResourcePaths.loaded_resources!")
+		packed_scene = null
 
 func _on_start_button_pressed() -> void:
-	#get_tree().change_scene_to_file("res://scenes/level1.tscn")
-	var new_scene: PackedScene = ResourceLoader.load("res://scenes/level1.tscn") # Gets the loaded scene, which is packed, so it'll have to be manually instantiated
-	var new_node = new_scene.instantiate() # Instantiates a copy of the loaded scene
-	#var current_scene = get_tree().current_scene # Stores the currently active scene, so we can replace it later
-	get_parent().add_child(new_node)
+	background_image.hide()
 	ui.show()
-	queue_free()
-	#get_tree().current_scene = new_node # Assigns our new scene as the current scene
-	#current_scene.queue_free() # Now we can remove the original scene
+	GameManager.load_new_level(packed_scene)
+	main_menu.hide()
+	
+func _on_exit_button_pressed() -> void:
+	get_tree().quit()

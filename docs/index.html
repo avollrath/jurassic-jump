@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"
+    />
+    <title>Jurassic Jump</title>
+    <style>
+      /* Font classes */
+      .gorditas-regular {
+        font-family: "Gorditas", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+      }
+
+      .gorditas-bold {
+        font-family: "Gorditas", serif;
+        font-weight: 700;
+        font-style: normal;
+        color: white;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        overflow: hidden;
+        touch-action: none;
+      }
+
+      #canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+      #canvas:focus {
+        outline: none;
+      }
+
+      #andre-intro {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 9999;
+        gap: 5rem;
+      }
+
+      .text {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .logo {
+        width: 30vw;
+        min-width: 100px;
+        max-width: 400px;
+      }
+      #andre-intro.fade-in {
+        opacity: 1;
+      }
+      #andre-intro.fade-out {
+        opacity: 0;
+      }
+    </style>
+    <link
+      id="-gd-engine-icon"
+      rel="icon"
+      type="image/png"
+      href="index.icon.png"
+    />
+    <link rel="apple-touch-icon" href="index.apple-touch-icon.png" />
+  </head>
+	<body>
+		<canvas id="canvas">
+			Your browser does not support the canvas tag.
+		</canvas>
+
+		<noscript>
+			Your browser does not support JavaScript.
+		</noscript>
+
+		<div id="andre-intro" class="gorditas-bold">
+			<img src="vollrath_logo.svg" class="logo" />
+			<span class='text'>André Vollrath presents ...</span>
+		  </div>
+
+		<script src="index.js"></script>
+		<script>
+			   (function () {
+        const introDiv = document.getElementById("andre-intro");
+
+        setTimeout(() => {
+          introDiv.classList.add("fade-in");
+        }, 1000);
+
+   
+      })();
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":48992944,"index.wasm":43016933},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_THREADS_ENABLED = false;
+const engine = new Engine(GODOT_CONFIG);
+
+(function () {
+	const statusOverlay = document.getElementById('status');
+	const statusProgress = document.getElementById('status-progress');
+	const statusNotice = document.getElementById('status-notice');
+
+	let initializing = true;
+	let statusMode = '';
+
+	function setStatusMode(mode) {
+		if (statusMode === mode || !initializing) {
+			return;
+		}
+		if (mode === 'hidden') {
+			statusOverlay.remove();
+			initializing = false;
+			return;
+		}
+		statusOverlay.style.visibility = 'visible';
+		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
+		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
+		statusMode = mode;
+	}
+
+	function setStatusNotice(text) {
+		while (statusNotice.lastChild) {
+			statusNotice.removeChild(statusNotice.lastChild);
+		}
+		const lines = text.split('\n');
+		lines.forEach((line) => {
+			statusNotice.appendChild(document.createTextNode(line));
+			statusNotice.appendChild(document.createElement('br'));
+		});
+	}
+
+	function displayFailureNotice(err) {
+		console.error(err);
+		if (err instanceof Error) {
+			setStatusNotice(err.message);
+		} else if (typeof err === 'string') {
+			setStatusNotice(err);
+		} else {
+			setStatusNotice('An unknown error occured');
+		}
+		setStatusMode('notice');
+		initializing = false;
+	}
+
+	const missing = Engine.getMissingFeatures({
+		threads: GODOT_THREADS_ENABLED,
+	});
+
+	if (missing.length !== 0) {
+		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
+			// There's a chance that installing the service worker would fix the issue
+			Promise.race([
+				navigator.serviceWorker.getRegistration().then((registration) => {
+					if (registration != null) {
+						return Promise.reject(new Error('Service worker already exists.'));
+					}
+					return registration;
+				}).then(() => engine.installServiceWorker()),
+				// For some reason, `getRegistration()` can stall
+				new Promise((resolve) => {
+					setTimeout(() => resolve(), 2000);
+				}),
+			]).catch((err) => {
+				console.error('Error while registering service worker:', err);
+			}).then(() => {
+				window.location.reload();
+			});
+		} else {
+			// Display the message as usual
+			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
+			displayFailureNotice(missingMsg + missing.join('\n'));
+		}
+	} else {
+		setStatusMode('progress');
+		engine.startGame({
+			'onProgress': function (current, total) {
+				if (current > 0 && total > 0) {
+					statusProgress.value = current;
+					statusProgress.max = total;
+				} else {
+					statusProgress.removeAttribute('value');
+					statusProgress.removeAttribute('max');
+				}
+			},
+		}).then(() => {
+			setStatusMode('hidden');
+		}, displayFailureNotice);
+	}
+}());
+		</script>
+	</body>
+</html>
+
