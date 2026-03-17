@@ -5,7 +5,13 @@
 </p>
 
 <p align="center">
-  <video src="./preview.mp4" controls muted playsinline width="100%"></video>
+  <a href="./preview.mp4">
+    <img src="docs/index.png" alt="Watch Jurassic Jump gameplay preview" width="100%" />
+  </a>
+</p>
+
+<p align="center">
+  <em>Click the image to open the gameplay preview video.</em>
 </p>
 
 <p align="center">
@@ -49,7 +55,7 @@ The project is built in Godot and includes a custom branded web shell, scene-bas
 
 - `A` or `Left Arrow`: Move left
 - `D` or `Right Arrow`: Move right
-- `Space` or `W`: Jump
+- `Space` or `W` or `Up Arrow`: Jump
 - `Esc`: Exit / back where supported
 
 ## Play Online

@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://75e4pjjygybg"]
+[gd_scene format=3 uid="uid://75e4pjjygybg"]
 
 [ext_resource type="Theme" uid="uid://ctns4fvpvo0gj" path="res://scripts/ui_theme.tres" id="1_22d0k"]
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_cg51m"]
+[ext_resource type="Script" uid="uid://biftqk68qyib8" path="res://scripts/main_menu.gd" id="1_cg51m"]
 [ext_resource type="Texture2D" uid="uid://evmb2bn5tut4" path="res://assets/sprites/menu_frame.png" id="1_y4gav"]
 [ext_resource type="Texture2D" uid="uid://cw6sjov2nii38" path="res://assets/sprites/logo.png" id="2_6t7kt"]
 
@@ -12,7 +12,7 @@ keycode = 4194309
 [sub_resource type="Shortcut" id="Shortcut_5lnts"]
 events = [SubResource("InputEventKey_yie48")]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=950634465]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,7 @@ size_flags_horizontal = 4
 theme = ExtResource("1_22d0k")
 script = ExtResource("1_cg51m")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=940668833]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,7 +37,7 @@ offset_bottom = 297.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Frame" type="TextureRect" parent="Panel"]
+[node name="Frame" type="TextureRect" parent="Panel" unique_id=446486278]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -52,7 +52,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_y4gav")
 
-[node name="Logo" type="TextureRect" parent="Panel"]
+[node name="Logo" type="TextureRect" parent="Panel" unique_id=287218715]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -65,8 +65,8 @@ grow_horizontal = 2
 texture = ExtResource("2_6t7kt")
 expand_mode = 1
 
-[node name="StartButton" type="Button" parent="Panel"]
-layout_mode = 2
+[node name="StartButton" type="Button" parent="Panel" unique_id=1946182601]
+layout_mode = 0
 offset_left = 93.0
 offset_top = 294.0
 offset_right = 463.0
@@ -78,7 +78,7 @@ theme = ExtResource("1_22d0k")
 shortcut = SubResource("Shortcut_5lnts")
 text = "Start Game"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=214469327]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -96,7 +96,7 @@ pivot_offset = Vector2(158, 107)
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="OptionsButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="Panel/VBoxContainer" unique_id=2017027476]
 visible = false
 layout_mode = 2
 theme = ExtResource("1_22d0k")
@@ -104,13 +104,13 @@ disabled = true
 text = "Options
 "
 
-[node name="ExitButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="Panel/VBoxContainer" unique_id=869150182]
 visible = false
 layout_mode = 2
 disabled = true
 text = "Exit"
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=460292512]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5

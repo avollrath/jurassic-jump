@@ -7,87 +7,97 @@
 			href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0"
+		/>
 		<title>Jurassic Jump</title>
-		<style>
-html,
-body {
-	margin: 0;
-	padding: 0;
-	background-color: black;
-	color: white;
-	overflow: hidden;
-	touch-action: none;
-}
-
-.gorditas-regular {
-	font-family: "Gorditas", serif;
-	font-weight: 400;
-	font-style: normal;
-	color: white;
-}
-
-.gorditas-bold {
-	font-family: "Gorditas", serif;
-	font-weight: 700;
-	font-style: normal;
-	color: white;
-}
-
-#canvas {
-	display: block;
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-#canvas:focus {
-	outline: none;
-}
-
-#andre-intro {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-size: 4rem;
-	color: white;
-	opacity: 0;
-	transition: opacity 0.5s ease-in-out;
-	z-index: 9999;
-	gap: 5rem;
-}
-
-#andre-intro.fade-in {
-	opacity: 1;
-}
-
-#andre-intro.fade-out {
-	opacity: 0;
-}
-
-.text {
-	font-size: 3rem;
-	text-align: center;
-}
-
-.logo {
-	width: 30vw;
-	min-width: 100px;
-	max-width: 400px;
-}
-		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: black;
+				color: white;
+				overflow: hidden;
+				touch-action: none;
+			}
+
+			.gorditas-regular {
+				font-family: "Gorditas", serif;
+				font-weight: 400;
+				font-style: normal;
+				color: white;
+			}
+
+			.gorditas-bold {
+				font-family: "Gorditas", serif;
+				font-weight: 700;
+				font-style: normal;
+				color: white;
+			}
+
+			#canvas {
+				display: block;
+				width: 100vw;
+				height: 100vh;
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+
+			#canvas:focus {
+				outline: none;
+			}
+
+			#andre-intro {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-size: 4rem;
+				color: white;
+				opacity: 0;
+				transition: opacity 0.5s ease-in-out;
+				z-index: 9999;
+				gap: 5rem;
+			}
+
+			#andre-intro.fade-in {
+				opacity: 1;
+			}
+
+			#andre-intro.fade-out {
+				opacity: 0;
+			}
+
+			.text {
+				font-size: 3rem;
+				text-align: center;
+			}
+
+			.logo {
+				width: 30vw;
+				min-width: 100px;
+				max-width: 400px;
+			}
+		</style>
+		<link
+			id="-gd-engine-icon"
+			rel="icon"
+			type="image/png"
+			href="index.icon.png"
+		/>
+		<link rel="apple-touch-icon" href="index.apple-touch-icon.png" />
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -100,46 +110,37 @@ body {
 
 		<div id="andre-intro" class="gorditas-bold">
 			<img src="vollrath_logo.svg" class="logo" alt="Vollrath logo" />
-			<span class="text">André Vollrath presents ...</span>
+			<span class="text">Andre Vollrath presents ...</span>
 		</div>
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":49759404,"index.wasm":35739700},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
-const GODOT_THREADS_ENABLED = false;
-const engine = new Engine(GODOT_CONFIG);
+			const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":49761116,"index.wasm":35739700},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+			const engine = new Engine(GODOT_CONFIG);
 
-(function () {
-	const introDiv = document.getElementById('andre-intro');
+			(function () {
+				const introDiv = document.getElementById("andre-intro");
 
-	function displayFailureNotice(err) {
-		console.error('Engine start failed:', err);
-		introDiv.classList.add('fade-in');
-		introDiv.innerHTML = "<span class='text'>Sorry...an error occurred while loading the game.</span>";
-	}
+				function displayFailureNotice(err) {
+					console.error("Engine start failed:", err);
+					introDiv.classList.add("fade-in");
+					introDiv.innerHTML =
+						"<span class='text'>Sorry...an error occurred while loading the game.</span>";
+				}
 
-	setTimeout(() => {
-		introDiv.classList.add('fade-in');
-	}, 1000);
+				setTimeout(() => {
+					introDiv.classList.add("fade-in");
+				}, 1000);
 
-	const missing = Engine.getMissingFeatures({
-		threads: GODOT_THREADS_ENABLED,
-	});
-
-	if (missing.length !== 0) {
-		console.error('Missing features:', missing);
-		introDiv.classList.add('fade-in');
-		introDiv.innerHTML = "<span class='text'>Sorry, your browser is missing required features.</span>";
-	} else {
-		engine.startGame({}).then(() => {
-			introDiv.classList.remove('fade-in');
-			introDiv.classList.add('fade-out');
-			setTimeout(() => {
-				introDiv.remove();
-			}, 600);
-		}, displayFailureNotice);
-	}
-}());
+				engine.startGame({}).then(() => {
+					introDiv.classList.remove("fade-in");
+					introDiv.classList.add("fade-out");
+					setTimeout(() => {
+						introDiv.remove();
+					}, 600);
+				}, displayFailureNotice);
+			})();
 		</script>
 	</body>
 </html>
+

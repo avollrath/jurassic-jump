@@ -22,6 +22,10 @@ var messages = [
 @onready var main_menu: Control          = $ScreenLayer/MainMenu
 @onready var bg_image: TextureRect       = $ScreenLayer/BackgroundImage
 
+const LOAD_PROGRESS_CAP := 83.0
+const WARMUP_PROGRESS_START := LOAD_PROGRESS_CAP
+const WARMUP_PROGRESS_END := 100.0
+
 var total_resources = 0
 var current_index = 0
 var current_path = ""
@@ -83,7 +87,7 @@ func update_progress() -> void:
 		# Convert to the overall progress across *all* resources
 		# e.g. (loaded_count + fraction_of_current) / total
 		var overall_progress = (current_index + per_resource_progress) / float(total_resources)
-		progress_bar.value = overall_progress * 100
+		progress_bar.value = overall_progress * LOAD_PROGRESS_CAP
 
 		# Once the current resource is fully loaded, retrieve it and move on
 		if per_resource_progress == 1.0:
@@ -100,26 +104,40 @@ func update_progress() -> void:
 			load_next_resource()
 
 func finish_loading() -> void:
+	if not startup_warmup_complete:
+		_finish_loading_with_warmup()
+		return
+
 	loading_label.hide()
 	progress_bar.hide()
 	press_key.show()
+
+func _finish_loading_with_warmup() -> void:
+	if is_starting:
+		return
+
+	is_starting = true
+	message_timer.stop()
+	loading_label.show()
+	loading_label.text = "Warming up graphics..."
+	press_key.hide()
+	progress_bar.show()
+	progress_bar.value = WARMUP_PROGRESS_START
+
+	await $ScreenLayer/MainMenu.init_resources()
+	await _warm_up_graphics()
+	$ScreenLayer/MainMenu.freeze_preloaded_level()
+	_reset_viewport_canvas()
+
+	startup_warmup_complete = true
+	is_starting = false
+	finish_loading()
 	
 func start_game() -> void:
 	if is_starting:
 		return
 
 	is_starting = true
-	message_timer.stop()
-
-	if not startup_warmup_complete:
-		loading_label.show()
-		loading_label.text = "Warming up graphics..."
-		press_key.hide()
-		await $ScreenLayer/MainMenu.init_resources()
-		await _warm_up_graphics()
-		$ScreenLayer/MainMenu.freeze_preloaded_level()
-		_reset_viewport_canvas()
-		startup_warmup_complete = true
 
 	loading_screen.hide()
 	_reset_viewport_canvas()
@@ -130,6 +148,9 @@ func start_game() -> void:
 	is_starting = false
 
 func _warm_up_graphics() -> void:
+	var warmup_steps := 14
+	var warmup_step := 0
+
 	var warmup_root := Node2D.new()
 	warmup_root.name = "WarmupRoot"
 	warmup_root.z_index = -1000
@@ -143,13 +164,18 @@ func _warm_up_graphics() -> void:
 	# Let the scene enter the tree before forcing emissions so WebGL has real draw work to compile.
 	for i in range(2):
 		await get_tree().process_frame
+		warmup_step += 1
+		_update_warmup_progress(warmup_step, warmup_steps)
 
 	_restart_particles_recursive(warmup_root)
 
 	for i in range(12):
 		await get_tree().process_frame
+		warmup_step += 1
+		_update_warmup_progress(warmup_step, warmup_steps)
 
 	warmup_root.queue_free()
+	progress_bar.value = WARMUP_PROGRESS_END
 
 func _reset_viewport_canvas() -> void:
 	var viewport := get_viewport()
@@ -194,6 +220,14 @@ func _prepare_warmup_instance(instance: Node) -> void:
 	var glow_particles := instance.get_node_or_null("Glow") as GPUParticles2D
 	if glow_particles:
 		glow_particles.emitting = true
+
+func _update_warmup_progress(step: int, total_steps: int) -> void:
+	if total_steps <= 0:
+		progress_bar.value = WARMUP_PROGRESS_END
+		return
+
+	var t := float(step) / float(total_steps)
+	progress_bar.value = lerp(WARMUP_PROGRESS_START, WARMUP_PROGRESS_END, t)
 
 func _restart_particles_recursive(node: Node) -> void:
 	for child in node.get_children():
