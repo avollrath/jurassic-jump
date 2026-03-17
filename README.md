@@ -4,15 +4,6 @@
   <a href="https://avollrath.github.io/jurassic-jump/"><strong>Play the live version</strong></a>
 </p>
 
-<p align="center">
-  <a href="./preview.mp4">
-    <img src="docs/index.png" alt="Watch Jurassic Jump gameplay preview" width="100%" />
-  </a>
-</p>
-
-<p align="center">
-  <em>Click the image to open the gameplay preview video.</em>
-</p>
 
 <p align="center">
   <strong>A colorful dinosaur platformer built with Godot.</strong>
@@ -23,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/index.png" alt="Jurassic Jump preview" width="100%" />
+  <img src="./jurassic-jump.jpg" alt="Jurassic Jump preview" width="100%" />
 </p>
 
 ## Overview
