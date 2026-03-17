@@ -12,7 +12,7 @@ var hearts: Array[TextureRect] = []
 var label: Label
 var highscore_label: Label
 var final_score_label: Label
-@onready var game_over: Control = $"../main/GameOver"
+@onready var game_over: Control = $"../main/ScreenLayer/GameOver"
 @onready var ui: CanvasLayer = $"../main/UI"
 
 # Loading state tracking
@@ -92,7 +92,7 @@ func load_new_level(new_level_scene: PackedScene, level_type: int = LevelType.RE
 		
 	is_level_loading = true
 	var main_node = get_node("/root/main")
-	var spinner = main_node.get_node("LoadingSpinner")
+	var spinner = main_node.get_node("ScreenLayer/LoadingSpinner")
 	
 	# Show and start spinner animation
 	spinner.show()
@@ -133,7 +133,7 @@ func load_regular_level(new_level_scene: PackedScene, main_node: Node) -> void:
 		await get_tree().process_frame
 
 func load_final_level(main_node: Node) -> void:
-	var end_screen = main_node.get_node("Winner")
+	var end_screen = main_node.get_node("ScreenLayer/Winner")
 	ui.hide()
 	end_screen.show()
 	final_score_label.text = "High Score: " + str(score)
